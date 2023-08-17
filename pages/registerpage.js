@@ -377,7 +377,7 @@ const[boolcheck,setbool1]=useState(true)
           <input type="tel" placeholder="+919279279289" id='number' required className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500"/>
         </div>
         <div className="mb-4">
-          <label htmlFor="email" required className="block text-[#189BA5] font-bold mb-2">Email:<span className='text-red-500'>*</span></label>
+          <label htmlFor="email" required className="block text-[#189BA5] font-bold mb-2">Email:<span className='text-red-500'>*</span><span className='mx-2 text-red-500'> (Use the same email if signed up with google) </span></label>
           <input type="email" placeholder="Use same email if signed up with google" id="email_field" required className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500"/>
         </div>
         <div className="mb-4">
