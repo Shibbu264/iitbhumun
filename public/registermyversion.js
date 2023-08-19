@@ -458,7 +458,9 @@ console.log(data.length)
       const hehe=ref(database,"preferences/")
       
       const titu=push(hehe);
-      if(name2!=''){set(titu,{
+      if(name2!=''){
+        
+        set(titu,{
         Registration_type:"Double Delegates",
         name:name,
         Phone_number:number,

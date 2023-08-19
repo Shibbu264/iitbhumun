@@ -181,10 +181,13 @@ const[buttondisplay,setdisplay]=useState(false)
   }, [formInput]);
 
   const committees = [];
-
+  const[boolcheck,setbool1]=useState(true)
   data.registerCommittees.map((i) => {
-    committees.push(i);
+    
+if(i=='AIPPM'&&boolcheck==false){}
+else{committees.push(i);}
   });
+  
 
   const [selected1, setSelected1] = useState('None');
 
@@ -293,7 +296,7 @@ const[buttondisplay,setdisplay]=useState(false)
   if (type3) {
     options3 = type3.map((el) => <option key={el}>{el}</option>);
   }
-const[boolcheck,setbool1]=useState(true)
+
   return (
     <div id='qt'>
       <Head>
