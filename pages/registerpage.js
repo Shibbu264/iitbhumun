@@ -335,7 +335,7 @@ else{committees.push(i);}
           </div>
       <form id="registrationForm"  className=" bg-white rounded-lg shadow-md p-6">
         
-        <button type="button" onClick={()=>{setbool1(!boolcheck)}} class="py-2.5 px-5 mx-auto block  text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full  border-black border-2 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">{boolcheck?"Register as Double Delegate":"Register as Single Delegate"}</button>
+        {/* <button type="button" onClick={()=>{setbool1(!boolcheck)}} class="py-2.5 px-5 mx-auto block  text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full  border-black border-2 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">{boolcheck?"Register as Double Delegate":"Register as Single Delegate"}</button> */}
     { boolcheck? <h1 value="nothing" id='valuecheck' className='text-center font-semibold sm:xl text-2xl mt-2 mb-2'><span className='text-red-500'>Note: </span>Campus Ambassadors also need to fill up this form.</h1>:<h1 value="something" id='valuecheck1' className='text-center text-2xl my-3 font-bold'>Double Delegate Registration</h1>}
        
     <div id='google'className="m-auto"> <GoogleButton className="m-auto" id='google'
