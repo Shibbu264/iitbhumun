@@ -84,11 +84,11 @@ export default function Hero() {
             layout="responsive"
             alt="hero images"
           />
-            <div className='z-10 absolute top-96 bottom-0 left-0 right-0'>
+            {/* <div className='z-10 absolute top-96 bottom-0 left-0 right-0'>
         
         <h1 className=' finaldate text-3xl text-center text-[#fff] whitespace-nowrap md:text-6xl mt-18  mx-auto border-[#fff] border-solid'>29 SEPT - 1 OCT</h1>
        
-        </div>
+        </div> */}
           <Link href={'/registerpage'}><button className='absolute block mx-auto t-0 left-0 w-56 right-0 z-10 bottom-60 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-4xl px-4 p-4 rounded-xl'>Register</button></Link>
         </div>
         <div className="row-span-full col-span-full">

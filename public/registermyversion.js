@@ -636,7 +636,7 @@ console.log(data.length)
                   const userRegisteredRef = ref(database,"Referral_program/"+entryId+"/"+"UserRegistered");
         
                   runTransaction(userRegisteredRef, (userRegistered) => {
-                    return (userRegistered || 0) + 1; // Increment the count by 1
+                    return (userRegistered || 0) + 1; 
                   })
                     .then(() => {
                       console.log('UserRegistered count incremented successfully');
