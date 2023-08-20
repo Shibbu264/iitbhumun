@@ -102,7 +102,7 @@ export default function Hero() {
         <h1 className=' finaldate text-3xl text-center text-[#fff] whitespace-nowrap md:text-6xl mt-18  mx-auto border-[#fff] border-solid'>29 SEPT - 1 OCT</h1>
        
         </div> */}
-          <Link href={'/registerpage'}><button className='absolute block mx-auto t-0 left-0 w-64 right-0 z-10 bottom-60 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-4xl px-4 p-4 rounded-xl'>Register now!</button></Link>
+          {changebar? <Link href={'/registerpage'}><button className='absolute block mx-auto t-0 left-0 w-52 right-0 z-10 bottom-52 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-2xl px-4 p-4 rounded-xl'>Register now!</button></Link>:<Button onClick={()=>{window.location.replace("/loggedinhomepage")}} className='absolute block mx-auto t-0 left-0 w-52 right-0 z-10 bottom-52 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-2xl px-4 p-4 rounded-xl'>View Profile</Button>}
         </div>
         <div className="row-span-full col-span-full">
           <Image
