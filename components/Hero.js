@@ -84,7 +84,7 @@ export default function Hero() {
             layout="responsive"
             alt="hero images"
           />
-            <div className="row-span-full col-span-full self-center text-center "  data-te-animation-init
+            <div className="row-span-full absolute bottom-96 block left-0 right-0 col-span-full self-center text-center z-10  "  data-te-animation-init
   data-te-animation-start="onScroll"
   data-te-animation-on-scroll="repeat"
   data-te-animation-reset="true"
@@ -102,7 +102,7 @@ export default function Hero() {
         <h1 className=' finaldate text-3xl text-center text-[#fff] whitespace-nowrap md:text-6xl mt-18  mx-auto border-[#fff] border-solid'>29 SEPT - 1 OCT</h1>
        
         </div> */}
-          <Link href={'/registerpage'}><button className='absolute block mx-auto t-0 left-0 w-56 right-0 z-10 bottom-60 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-4xl px-4 p-4 rounded-xl'>Register</button></Link>
+          <Link href={'/registerpage'}><button className='absolute block mx-auto t-0 left-0 w-64 right-0 z-10 bottom-60 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-4xl px-4 p-4 rounded-xl'>Register now!</button></Link>
         </div>
         <div className="row-span-full col-span-full">
           <Image
