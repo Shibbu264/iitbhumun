@@ -84,6 +84,19 @@ export default function Hero() {
             layout="responsive"
             alt="hero images"
           />
+            <div className="row-span-full col-span-full self-center text-center "  data-te-animation-init
+  data-te-animation-start="onScroll"
+  data-te-animation-on-scroll="repeat"
+  data-te-animation-reset="true"
+  data-te-animation="[slide-right_1s_ease-in-out]">
+          <Image className=''
+            src="/images/hero-logo.svg"
+            width={300}
+            height={123.7}
+            alt="hero images"
+          />
+         
+        </div>
             {/* <div className='z-10 absolute top-96 bottom-0 left-0 right-0'>
         
         <h1 className=' finaldate text-3xl text-center text-[#fff] whitespace-nowrap md:text-6xl mt-18  mx-auto border-[#fff] border-solid'>29 SEPT - 1 OCT</h1>
@@ -100,19 +113,7 @@ export default function Hero() {
             alt="hero images"
           />
         </div>
-        <div className="row-span-full col-span-full self-center text-center "  data-te-animation-init
-  data-te-animation-start="onScroll"
-  data-te-animation-on-scroll="repeat"
-  data-te-animation-reset="true"
-  data-te-animation="[slide-right_1s_ease-in-out]">
-          <Image className=''
-            src="/images/hero-logo.svg"
-            width={300}
-            height={123.7}
-            alt="hero images"
-          />
-         
-        </div>
+      
         
           
         
