@@ -94,7 +94,8 @@ export default function NavBar({ navbar,backgroundColor,qt}) {
           <Menu>
             <MenuHandler className={`${!navbar ? 'hidden' : ''}`}>
               <Image
-                src="/images/mobile-actinav.svg"
+                src="/images/mobile-actinav1.svg"
+                
                 width={52}
                 height={20}
                 alt="mobile-actinav"
@@ -113,9 +114,9 @@ export default function NavBar({ navbar,backgroundColor,qt}) {
         </div>
         <div className={`${!navbar ? 'hidden' : ''}`}>
           <Image
-            src="/images/mobile-activenav-logo.svg"
-            width={52}
-            height={54.45}
+            src="/images/munvector.svg"
+            width={54}
+            height={56.45}
             alt="mobile-activenav-logo"
           />
         </div>
