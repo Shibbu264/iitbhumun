@@ -616,6 +616,7 @@ console.log(data.length)
       localStorage.setItem("value",Reff)
       const refrec=push(abcd)
       set(refrec,{
+        name:name,
     email:email,
     referralCode:Reff,
     UserRegistered:0,
