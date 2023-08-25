@@ -556,29 +556,31 @@ const databaseRef = ref(database, "preferences");
           })
             .then(() => {
 
- const snapshot = get(ref(database, "Referral_program/"))
-            .then((snapshot) => {
-              const data = snapshot.val();
-            
+              const snapshot = get(ref(database, "Referral_program/"))
+              .then((snapshot) => {
+                const data = snapshot.val();
               
-              for (const itemId in data) {
-                const item = data[itemId];
-              
-                  const entryId = itemId;
-                  const userRegisteredRef = ref(database,"Referral_program/"+entryId+"/"+"UserRegistered");
-        
-                  runTransaction(userRegisteredRef, (userRegistered) => {
-                    return (userRegistered || 0) + 1; 
-                  })
-                    .then(() => {
-                      alert("Referral code succesfully applied")
+                const filteredData = [];
+                for (const itemId in data) {
+                  const item = data[itemId];
+                  if (item.referralCode === document.getElementById("reffvalue").value) {
+                    const entryId = itemId;
+                    const userRegisteredRef = ref(database,"Referral_program/"+entryId+"/"+"UserRegistered");
+          
+                    runTransaction(userRegisteredRef, (userRegistered) => {
+                      return (userRegistered || 0) + 1; 
                     })
-                    .catch((error) => {
-                      console.error('Error incrementing UserRegistered count:', error);
-                    });
-                
-              }})
-      
+                      .then(() => {
+                        document.getElementById("reff").innerHTML="<h1 class='text-[#ABCF3A]'>Referral Code Applied!!</h1>"
+                       
+                      })
+                      .catch((error) => {
+                        alert('Error incrementing UserRegistered count:', error);
+                      });
+                  }
+                }})
+        
+        
       
 
              
