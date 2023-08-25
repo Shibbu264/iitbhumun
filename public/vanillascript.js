@@ -119,7 +119,12 @@ document.getElementById('ssbutton').innerHTML=`Upload`
 
 }
 
+document.getElementById("reffbutton").addEventListener("click",function(){
+ 
 
+updatedata2()
+  
+})
 
 
 
@@ -273,6 +278,7 @@ function fetchData1() {
             p++;
       });
           Object.keys(item).forEach((key) => {
+            if(key=="Referralcode"&&item[key]==""){document.getElementById("reff").style.display="block"}
             if (key == "alloted" && item[key] != "NO") {
               document.getElementById("progressvalue").innerHTML=`75%`
               document.getElementById("progressvalue2").style.width="75%"
@@ -514,7 +520,120 @@ else{ document.getElementById("paymentqr").src="/images/aastha.jpg"}
 fetchData1();
 
 
+function updatedata2(){
+const databaseRef = ref(database, "preferences");
+  const auth = getAuth();
+  // Retrieve the data once
+  get(databaseRef)
+    .then((snapshot) => {
+      snapshot.forEach((childSnapshot) => {
 
+        const data = childSnapshot.val();
+
+
+        if (data.email === auth.currentUser.email) {
+
+
+         
+          const dataRef = ref(database, `preferences/${childSnapshot.key}`);
+
+          // Update the value using the reference and the updated data
+          update(dataRef, {
+
+          Referralcode: document.getElementById("reffvalue").value,
+
+
+
+
+
+
+
+
+
+
+
+
+          })
+            .then(() => {
+
+ const snapshot = get(ref(database, "Referral_program/"))
+            .then((snapshot) => {
+              const data = snapshot.val();
+            
+              
+              for (const itemId in data) {
+                const item = data[itemId];
+              
+                  const entryId = itemId;
+                  const userRegisteredRef = ref(database,"Referral_program/"+entryId+"/"+"UserRegistered");
+        
+                  runTransaction(userRegisteredRef, (userRegistered) => {
+                    return (userRegistered || 0) + 1; 
+                  })
+                    .then(() => {
+                      alert("Referral code succesfully applied")
+                    })
+                    .catch((error) => {
+                      console.error('Error incrementing UserRegistered count:', error);
+                    });
+                
+              }})
+      
+      
+
+             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            })
+            .catch((error) => {
+              alert("Error Updating Data!")
+
+            });
+
+}})})}
 
 function updatedata() {
 
@@ -543,7 +662,7 @@ function updatedata() {
         if (data.email === auth.currentUser.email) {
 
 
-          // Get the reference to the specific data using the child snapshot key
+         
           const dataRef = ref(database, `preferences/${childSnapshot.key}`);
 
           // Update the value using the reference and the updated data

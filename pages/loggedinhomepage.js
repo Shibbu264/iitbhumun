@@ -194,7 +194,7 @@ const[buttonname1,rename1]=useState("Change portfolio")
       rename1(updateportfolio1 ? buttonname1 = "Change portfolio" : buttonname1 = "Avoid Change")
       setfolio(!updateportfolio1)}
 
-    
+    const [usethis,setthis]=useState(true)
   
     return (
       
@@ -207,7 +207,18 @@ const[buttonname1,rename1]=useState("Change portfolio")
         <div id="wholescreen" className="sm:block  sm:mx-auto   block mx-auto "><div className="mx-auto block" >
         <h1 className="mt-24 mb-4 text-center inline-block mx-auto text-4xl font-extrabold leading-none tracking-tight text-[#189BA5] md:text-5xl  dark:text-[#189BA5]"></h1>
 <div id="ddheader"></div>
-          <div id="content" className="mt-29  h-fit px-4 md:w-screen  relative  mx-auto text-center font-bold" ></div>
+          <div id="content" className="mt-29  h-fit px-4 md:w-screen  relative  mx-auto text-center font-bold" >
+
+
+          </div>
+          <div id="reff" className="hidden">
+  <h1 className="text-[#ABCF3A]">You haven't used referral code</h1>
+  <Button className="my-2" onClick={()=>{setthis(!usethis)}}>use now</Button>
+  <div className={usethis?'hidden':'block'}>
+    <input type="text" id="reffvalue" className="mx-4"></input>
+    <Button type="button" id="reffbutton">Apply!</Button>
+  </div>
+</div>
           <div id="content3" className="hideit mt-29  h-fit px-4 md:w-screen  relative  mx-auto text-center font-bold" ></div>
           <h1 class="absolute top-0 left-0 bottom-0 right-0 z-[-1] text-9xl font-bold text-white">Heading Behind</h1>
 <div id="progressvalue1" class="text-center mx-auto gap-15 mb-1">
