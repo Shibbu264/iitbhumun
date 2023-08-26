@@ -183,23 +183,16 @@ const filterDataByUserEmail = (data) => {
 function fetchData() {
   return new Promise((resolve, reject) => {
     let data1, data2;
-    const Ref1 = ref(database, "records of Conference ambassadors/");
+    const Ref1 = ref(database, "preferences");
     onValue(Ref1, (snapshot) => {
       data1 = snapshot.val();
       const filteredData1 = filterDataByUserEmail(data1);
-      if (filteredData1.length > 0) {
+     
         resolve(filteredData1);
-      }
+      
     });
 
-    const Ref2 = ref(database, "records of single delegates/");
-    onValue(Ref2, (snapshot) => {
-      data2 = snapshot.val();
-      const filteredData2 = filterDataByUserEmail(data2);
-      if (filteredData2.length > 0) {
-        resolve(filteredData2);
-      }
-    });
+  
     
   });
 }
@@ -571,6 +564,7 @@ const databaseRef = ref(database, "preferences");
                       return (userRegistered || 0) + 1; 
                     })
                       .then(() => {
+                        document.getElementById("reff").style.display="block"
                         document.getElementById("reff").innerHTML="<h1 class='text-[#ABCF3A]'>Referral Code Applied!!</h1>"
                        
                       })
