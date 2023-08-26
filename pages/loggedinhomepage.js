@@ -189,13 +189,13 @@ const Loggedinhomepage = () => {
    const [hideportfolio,setportfolio]=useState(false)
   const [buttonname, rename] = useState("Show Portfolio")
 const[buttonname1,rename1]=useState("Change portfolio")
- 
+const[editprofile,setprofile]=useState(true)
     function pft() {
       rename1(updateportfolio1 ? buttonname1 = "Change portfolio" : buttonname1 = "Avoid Change")
       setfolio(!updateportfolio1)}
 
     const [usethis,setthis]=useState(true)
-  
+   
     return (
       
       <div className="bgchange relative w-fit sm:w-auto" >
@@ -205,12 +205,35 @@ const[buttonname1,rename1]=useState("Change portfolio")
 
         <h2 className="mt-50 text-center font-bold">x</h2>
         <div id="wholescreen" className="sm:block  sm:mx-auto   block mx-auto "><div className="mx-auto block" >
-        <h1 className="mt-24 mb-4 text-center inline-block mx-auto text-4xl font-extrabold leading-none tracking-tight text-[#189BA5] md:text-5xl  dark:text-[#189BA5]"></h1>
+        <h1 className="mt-22 mb-4 text-center inline-block mx-auto text-4xl font-extrabold leading-none tracking-tight text-[#189BA5] md:text-5xl  dark:text-[#189BA5]"></h1>
 <div id="ddheader"></div>
-          <div id="content" className="mt-29  h-fit px-4 md:w-screen  relative  mx-auto text-center font-bold" >
+<Button className="mt-12 mb-4" onClick={()=>{setprofile(!editprofile)}}>Edit Profile</Button>
+      <div id="content" className={editprofile?"mt-29  h-fit px-4 md:w-screen  relative  mx-auto text-center font-bold":"hidden"}></div>
+      
+      
+      <div class={editprofile?'hidden':' datacard bg rounded-lg sm:px-8 px-24   mb-6 w-fit mx-auto block  '} >
+             
+             <label className="text-white text-left">Name:</label>
+            <input id="name_field"   type="text" className=" mt-1 mx-auto mb-6 text-2xl mx-6 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 dark:bg-gray-700 "/>
+            <label className="text-white text-left">Age:</label>
+            <input id="age"  type="text" className=" mt-1 mx-auto mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5  dark:bg-gray-700 "/>
+            <label className="text-white text-left">Gender:</label>
+            <input id="gender"  type="text" className=" mt-1 mx-auto mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5  dark:bg-gray-700 "/>
+            <label className="text-white text-left">Institute:</label>
+            <input id="Institute"type="text" className=" mt-1 mx-auto mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5  dark:bg-gray-700 "/>
+            <label className="text-white text-left">Number of MUN appeared:</label>
+            <input id="muncount"  type="text" className=" mt-1 mx-auto mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5  dark:bg-gray-700 "/>
+            <label className="text-white text-left">Region:</label>
+            <input id="region"  type="text" className=" mt-1 mx-auto mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5  dark:bg-gray-700 "/> 
+            <label className="text-white text-left">Institute ID:</label>
+            <input type="file" id="file" className=" mt-1 mx-auto mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5  dark:bg-gray-700 "/> 
+            
+            <Button id="updatebutton1">Update!</Button>
+            <h1 className="text-[#ABCF3A] my-2" id="updateresult"></h1>
+            </div>
 
 
-          </div>
+
           <div id="reff" className="hidden">
   <h1 className="text-[#ABCF3A]">You haven't used referral code</h1>
   <Button className="my-2" onClick={()=>{setthis(!usethis)}}>use now</Button>

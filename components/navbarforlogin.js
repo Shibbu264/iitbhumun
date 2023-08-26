@@ -128,7 +128,7 @@ const [adminpanel,showadminpanel]=useState(false)
          
           <div className="profile-dropdown">
           
-          <FaUserCircle className='text-white cursor-pointer' id='profileicon' onClick={function(){setIsOpen(!isOpen)}} /> 
+          <FaUserCircle className='text-white cursor-pointer'  id='profileicon' onClick={function(){setIsOpen(!isOpen)}}  /> 
           {isOpen?(
         <div className='dropdowncontent'>
           <ul>

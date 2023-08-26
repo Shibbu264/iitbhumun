@@ -168,85 +168,15 @@ updatedata2()
 
 const userEmail = auth.currentUser ? auth.currentUser.email : "shivanshu264@gmail.com";
 
-// Function to filter data based on user email
-const filterDataByUserEmail = (data) => {
-  const filteredData = Object.values(data).filter((item) => {
-    const delegateData = Object.values(item);
-    return delegateData.some((nestedItem) => {
-      return nestedItem.email === auth.currentUser.email;
-    });
-  });
-  return filteredData;
-};
+
 
 // Function to fetch data from the database
-function fetchData() {
-  return new Promise((resolve, reject) => {
-    let data1, data2;
-    const Ref1 = ref(database, "preferences");
-    onValue(Ref1, (snapshot) => {
-      data1 = snapshot.val();
-      const filteredData1 = filterDataByUserEmail(data1);
-     
-        resolve(filteredData1);
-      
-    });
 
-  
-    
-  });
-}
-document.getElementById("content").innerHTML = "<div class='loader m-auto'></div>",
+document.getElementById("content").innerHTML = "<div class='loader m-auto'></div>";
  
-fetchData()
-  .then((DATA) => {
-    
-    document.getElementById("showbutton1").style.display = "inline"
-    document.getElementById("progressvalue1").style.display="block"
-    document.getElementById("progressvalue3").style.display="inline-block"
-    document.getElementById("paymentqr").style.display="inline"
-
-    
-
-
-    DATA.map((item) => {
-
-      const delegateData = Object.values(item);
-
-      const nestedItem = delegateData.find((item) => item.email === auth.currentUser.email);
-      localStorage.setItem("name",`${nestedItem.name}`)
-      document.getElementById("content").classList.add('animatecontent');
-      document.getElementById("content").innerHTML = `
-     
-            <ul class='datacard rounded-lg sm:px-8 px-24  bg-red-500 mb-6 w-fit mx-auto block  ' >
-            
-            <img src="images/profileicon.png" class="inline mx-auto w-40 h-40 rounded-full"></img>
-           <li class="mb-6 text-2xl mx-6 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Name:  ${nestedItem.name} </li>
-           <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Age: ${nestedItem.Age} </li>
-           <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Gender:  ${nestedItem.Gender} </li>
-           <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Institute:  ${nestedItem.Institute} </li>
-           <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Number of MUN appeared before:  ${nestedItem.MUNcount} </li>
-           <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Region: ${nestedItem.Region} </li>
-           <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"> Email: ${nestedItem.email} </li>
-          <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Phone Number:${nestedItem.Phone_number}
-           </ul>
-           <div class='selectedportfolio'>
-          
-           </div>
-           `;
-     
-       
 
 
 
-
-    })
-
-  })
-
-
-
-function fetchData1() {
   const snapshot = get(ref(database, "preferences/"))
     .then((snapshot) => {
       const data = snapshot.val();
@@ -260,6 +190,57 @@ function fetchData1() {
       }
       let i = 0;
       let p = 0;
+
+      document.getElementById("showbutton1").style.display = "inline"
+      document.getElementById("progressvalue1").style.display="block"
+      document.getElementById("progressvalue3").style.display="inline-block"
+      document.getElementById("paymentqr").style.display="inline"
+  
+      
+  
+  
+      filteredData.map((item) => {
+  
+      console.log(item)
+  
+        localStorage.setItem("name",`${item.name}`)
+      document.getElementById("name_field").value=item.name
+      document.getElementById("age").value=item.Gender
+      document.getElementById("gender").value=item.Age
+      document.getElementById("Institute").value=item.Institute
+      document.getElementById("muncount").value=(item.MUNcount).charAt(32)+(item.MUNcount).charAt(33)
+      document.getElementById("region").value=item.Region
+
+
+        document.getElementById("content").classList.add('animatecontent');
+        document.getElementById("content").innerHTML = `
+       
+              <ul class='datacard rounded-lg sm:px-8 px-24  bg-red-500 mb-6 w-fit mx-auto block  ' >
+             
+              <img src="images/profileicon.png" class="inline mx-auto w-40 h-40 rounded-full"></img>
+             <li class="mb-6 text-2xl mx-6 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Name:  ${item.name} </li>
+             <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Age: ${item.Age} </li>
+             <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Gender:  ${item.Gender} </li>
+             <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Institute:  ${item.Institute} </li>
+             <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">  ${item.MUNcount} </li>
+             <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Region: ${item.Region} </li>
+             <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"> Email: ${item.email} </li>
+            <li class="mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">Phone Number:${item.Phone_number}
+             </ul>
+             <div class='selectedportfolio'>
+            
+             </div>
+             `;
+       
+         
+  
+  
+  
+  
+      })
+  
+
+
       filteredData.forEach((item) => {
         Object.keys(item).forEach((key) => {
 
@@ -508,9 +489,8 @@ else{ document.getElementById("paymentqr").src="/images/aastha.jpg"}
     .catch((error) => {
       alert("Error fetching preferences data:", error);
     });
-};
 
-fetchData1();
+
 
 
 function updatedata2(){
@@ -751,13 +731,114 @@ function updatedata() {
 }
 
 document.getElementById("updatevalues").addEventListener("click", updatedata)
+function getInput(id) {
+  let abc= document.getElementById(id).value;
+ 
+  return abc
+}
+
+
+function saveRec2(name,age,gender,Institute,muncount,region,file){
+
+  const hehe=ref(database,"preferences/")
+  get(hehe)
+    .then((snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+
+        const data = childSnapshot.val();
+
+
+        if (data.email === auth.currentUser.email) {
+
+
+         
+          const dataRef = ref(database, `preferences/${childSnapshot.key}`);
+
+          // Update the value using the reference and the updated data
+          update(dataRef, {name:name,
+            Age:age,
+            Gender:gender,
+            Institute:Institute,
+            Institute_ID:localStorage.getItem("url3"),
+            Region:region,
+            MUNcount:`Number_of_MUNs_appeared_before: ${muncount}`,
+            })}}
+  
+    )}).then(()=>{
+      document.getElementById("updatebutton1").style.display="none"
+      document.getElementById("updateresult").innerHTML="Profile Updated! Reload to view"
+    })
+}
+function saveRec3(name,age,gender,Institute,muncount,region,file){
+
+  const hehe=ref(database,"preferences/")
+  get(hehe)
+    .then((snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+
+        const data = childSnapshot.val();
+
+
+        if (data.email === auth.currentUser.email) {
+
+
+         
+          const dataRef = ref(database, `preferences/${childSnapshot.key}`);
+
+          // Update the value using the reference and the updated data
+          update(dataRef, {name:name,
+            Age:age,
+            Gender:gender,
+            Institute:Institute,
+           
+            Region:region,
+            MUNcount:`Number_of_MUNs_appeared_before: ${muncount}`,
+            })}}
+  
+    )}).then(()=>{
+      document.getElementById("updatebutton1").style.display="none"
+      document.getElementById("updateresult").innerHTML="Profile Updated! Reload to view"
+    })
+}
 
 
 
+function uploadPhoto3() {
+  console.log("clicked")
+  document.getElementById("updatebutton1").innerHTML="<div class='loader'></div>"
+  const storage = getStorage(app);
+  const fileInput = document.getElementById('file');
+  const file = fileInput.files[0];
+
+  if (!file) {
+    
+    saveRec3(getInput('name_field'), getInput('age'),getInput('gender'),getInput('Institute'),getInput('muncount'),getInput('region'),getInput('file'), );
+    return;
+  }
+
+  // Create a unique filename for the photo (you can use the current timestamp or any other method)
+  const photoRef = Sref(storage, `photos/${file.name}`);
+
+  // Upload the file to Firebase Storage
+  uploadBytes(photoRef, file).then((snapshot) => {
+    // Get the download URL of the uploaded photo
+    
+    getDownloadURL(photoRef).then((downloadURL) => {
+    
+      console.log('Photo URL:', downloadURL);
+      
+      localStorage.setItem("url3",downloadURL)
+      saveRec2(getInput('name_field'), getInput('age'),getInput('gender'),getInput('Institute'),getInput('muncount'),getInput('region'),getInput('file'), );
+      
+      
+    }).catch((error) => {
+      console.error('Error getting download URL:', error);
+    });
+  }).catch((error) => {
+    console.error('Error uploading photo:', error);
+  });
+}
 
 
-
-
-
-
+document.getElementById("updatebutton1").addEventListener("click",uploadPhoto3)
 
