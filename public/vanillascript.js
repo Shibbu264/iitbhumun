@@ -205,8 +205,9 @@ document.getElementById("content").innerHTML = "<div class='loader m-auto'></div
   
         localStorage.setItem("name",`${item.name}`)
       document.getElementById("name_field").value=item.name
-      document.getElementById("age").value=item.Gender
-      document.getElementById("gender").value=item.Age
+      document.getElementById("age").value=item.Age
+      document.getElementById("number").value=item.Phone_number
+      document.getElementById("gender").value=item.Gender
       document.getElementById("Institute").value=item.Institute
       document.getElementById("muncount").value=(item.MUNcount).charAt(32)+(item.MUNcount).charAt(33)
       document.getElementById("region").value=item.Region
@@ -738,7 +739,7 @@ function getInput(id) {
 }
 
 
-function saveRec2(name,age,gender,Institute,muncount,region,file){
+function saveRec2(name,age,gender,number,Institute,muncount,region,file){
 
   const hehe=ref(database,"preferences/")
   get(hehe)
@@ -758,6 +759,7 @@ function saveRec2(name,age,gender,Institute,muncount,region,file){
           update(dataRef, {name:name,
             Age:age,
             Gender:gender,
+            Phone_number:number,
             Institute:Institute,
             Institute_ID:localStorage.getItem("url3"),
             Region:region,
@@ -769,7 +771,7 @@ function saveRec2(name,age,gender,Institute,muncount,region,file){
       document.getElementById("updateresult").innerHTML="Profile Updated! Reload to view"
     })
 }
-function saveRec3(name,age,gender,Institute,muncount,region,file){
+function saveRec3(name,age,gender,number,Institute,muncount,region,file){
 
   const hehe=ref(database,"preferences/")
   get(hehe)
@@ -789,6 +791,7 @@ function saveRec3(name,age,gender,Institute,muncount,region,file){
           update(dataRef, {name:name,
             Age:age,
             Gender:gender,
+            Phone_number:number,
             Institute:Institute,
            
             Region:region,
@@ -812,7 +815,7 @@ function uploadPhoto3() {
 
   if (!file) {
     
-    saveRec3(getInput('name_field'), getInput('age'),getInput('gender'),getInput('Institute'),getInput('muncount'),getInput('region'),getInput('file'), );
+    saveRec3(getInput('name_field'), getInput('age'),getInput('gender'),getInput('number'),getInput('Institute'),getInput('muncount'),getInput('region'),getInput('file'), );
     return;
   }
 

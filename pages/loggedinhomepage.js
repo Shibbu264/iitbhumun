@@ -219,6 +219,9 @@ const[editprofile,setprofile]=useState(true)
             <input id="age"  type="text" className=" mt-1 mx-auto mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5  dark:bg-gray-700 "/>
             <label className="text-white text-left">Gender:</label>
             <input id="gender"  type="text" className=" mt-1 mx-auto mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5  dark:bg-gray-700 "/>
+            <label className="text-white text-left">Phone Number:</label>
+            <input id="number"  type="text" className=" mt-1 mx-auto mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5  dark:bg-gray-700 "/>
+           
             <label className="text-white text-left">Institute:</label>
             <input id="Institute"type="text" className=" mt-1 mx-auto mb-6 text-2xl border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-4.5 px-4.5  dark:bg-gray-700 "/>
             <label className="text-white text-left">Number of MUN appeared:</label>
