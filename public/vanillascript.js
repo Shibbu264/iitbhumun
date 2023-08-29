@@ -831,7 +831,7 @@ function uploadPhoto3() {
       console.log('Photo URL:', downloadURL);
       
       localStorage.setItem("url3",downloadURL)
-      saveRec2(getInput('name_field'), getInput('age'),getInput('gender'),getInput('Institute'),getInput('muncount'),getInput('region'),getInput('file'), );
+      saveRec2(getInput('name_field'), getInput('age'),getInput('gender'),getInput('number'),getInput('Institute'),getInput('muncount'),getInput('region'),getInput('file'), );
       
       
     }).catch((error) => {
