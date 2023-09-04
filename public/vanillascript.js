@@ -281,10 +281,10 @@ document.getElementById("content").innerHTML = "<div class='loader m-auto'></div
                
 
                filteredData1.forEach((item) => { Object.keys(item).forEach((key) => {
-                if(key=="PaymentConfirmed"&&item[key]>=10){document.getElementById("paymentqr").src="/images/QRfor10.jpg"}
-                if(key=="PaymentConfirmed"&&item[key]>=15){document.getElementById("paymentqr").src="/images/QRfor15.jpg"}
-                if(key=="PaymentConfirmed"&&item[key]>=25){document.getElementById("paymentqr").src="/images/QRfor25.jpg"}
-                else{ document.getElementById("paymentqr").src="/images/abhishek.jpg"}  
+                if(key=="PaymentConfirmed"&&item[key]>=10){document.getElementById("paymentqr").src="/images/599.jpg"}
+                if(key=="PaymentConfirmed"&&item[key]>=15){document.getElementById("paymentqr").src="/images/599.jpg"}
+                if(key=="PaymentConfirmed"&&item[key]>=25){document.getElementById("paymentqr").src="/images/599.jpg"}
+                else{ document.getElementById("paymentqr").src="/images/599.jpg"}  
               })})
 
 
@@ -304,14 +304,14 @@ document.getElementById("content").innerHTML = "<div class='loader m-auto'></div
             }
                 else{
                   Object.keys(item).forEach((key) => {
-if(key=="p_name2"){document.getElementById("paymentqr").src="/images/paymentprice*2.jpg"}
-else{ document.getElementById("paymentqr").src="/images/aastha.jpg"}
+if(key=="p_name2"){document.getElementById("paymentqr").src="/images/599.jpg"}
+else{ document.getElementById("paymentqr").src="/images/599.jpg"}
                   })
                   
                  }
               document.getElementById("paymentqr").style.display="block"
-              document.getElementById("paymentqr").style.width="320px"
-              document.getElementById("paymentqr").style.height="240px"
+              document.getElementById("paymentqr").style.width="520px"
+              document.getElementById("paymentqr").style.height="540px"
               document.getElementById("ssform").style.display="block"
             
             }
@@ -331,10 +331,10 @@ else{ document.getElementById("paymentqr").src="/images/aastha.jpg"}
                
 
                filteredData1.forEach((item) => { Object.keys(item).forEach((key) => {
-                if(key=="PaymentConfirmed"&&item[key]>=10){document.getElementById("paymentqr").src="/images/QRfor10.jpg"}
-                if(key=="PaymentConfirmed"&&item[key]>=15){document.getElementById("paymentqr").src="/images/QRfor15.jpg"}
-                if(key=="PaymentConfirmed"&&item[key]>=25){document.getElementById("paymentqr").src="/images/QRfor25.jpg"}
-                else{ document.getElementById("paymentqr").src="/images/abhishek.jpg"}
+                if(key=="PaymentConfirmed"&&item[key]>=10){document.getElementById("paymentqr").src="/images/1099.jpg"}
+                if(key=="PaymentConfirmed"&&item[key]>=15){document.getElementById("paymentqr").src="/images/1099.jpg"}
+                if(key=="PaymentConfirmed"&&item[key]>=25){document.getElementById("paymentqr").src="/images/1099.jpg"}
+                else{ document.getElementById("paymentqr").src="/images/1099.jpg"}
                               })})
 
 
@@ -355,12 +355,12 @@ else{ document.getElementById("paymentqr").src="/images/aastha.jpg"}
                 
                 
                else{   Object.keys(item).forEach((key) => {
-                if(key=="p_name2"){document.getElementById("paymentqr").src="/images/paymentprice*2.jpg"}
-                else{ document.getElementById("paymentqr").src="/images/abhishek.jpg"}
+                if(key=="p_name2"){document.getElementById("paymentqr").src="/images/1099.jpg"}
+                else{ document.getElementById("paymentqr").src="/images/1099.jpg"}
                                   })}
               document.getElementById("paymentqr").style.display="block"
-              document.getElementById("paymentqr").style.width="320px"
-              document.getElementById("paymentqr").style.height="240px"
+              document.getElementById("paymentqr").style.width="520px"
+              document.getElementById("paymentqr").style.height="540px"
               document.getElementById("ssform").style.display="block"
             
             
@@ -382,10 +382,10 @@ else{ document.getElementById("paymentqr").src="/images/aastha.jpg"}
                
 
                filteredData1.forEach((item) => { Object.keys(item).forEach((key) => {
-                if(key=="PaymentConfirmed"&&item[key]>=10){document.getElementById("paymentqr").src="/images/QRfor10.jpg"}
-                if(key=="PaymentConfirmed"&&item[key]>=15){document.getElementById("paymentqr").src="/images/QRfor15.jpg"}
-                if(key=="PaymentConfirmed"&&item[key]>=25){document.getElementById("paymentqr").src="/images/QRfor25.jpg"}
-                else{ document.getElementById("paymentqr").src="/images/abhishek.jpg"}    
+                if(key=="PaymentConfirmed"&&item[key]>=10){document.getElementById("paymentqr").src="/images/1599.jpg"}
+                if(key=="PaymentConfirmed"&&item[key]>=15){document.getElementById("paymentqr").src="/images/1599.jpg"}
+                if(key=="PaymentConfirmed"&&item[key]>=25){document.getElementById("paymentqr").src="/images/1599.jpg"}
+                else{ document.getElementById("paymentqr").src="/images/1599.jpg"}    
               })})
 
 
@@ -405,14 +405,14 @@ else{ document.getElementById("paymentqr").src="/images/aastha.jpg"}
             }
              else{
               Object.keys(item).forEach((key) => {
-                if(key=="p_name2"){document.getElementById("paymentqr").src="/images/paymentprice*2.jpg"
+                if(key=="p_name2"){document.getElementById("paymentqr").src="/images/1599_2.jpg"
               
               }
-                else{ document.getElementById("paymentqr").src="/images/satwik.jpg"}
+                else{ document.getElementById("paymentqr").src="/images/1599.jpg"}
                                   })}
              document.getElementById("paymentqr").style.display="block"
              document.getElementById("paymentqr").style.width="520px"
-              document.getElementById("paymentqr").style.height="440px"
+              document.getElementById("paymentqr").style.height="540px"
               document.getElementById("ssform").style.display="block"
             
             
