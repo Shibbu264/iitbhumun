@@ -198,15 +198,23 @@ const handleSubmit1 = (itemId) => {
     }} src='/images/copy.png' className='ml-3 hover:border-2 hover:border-red-500 hover:p-1 inline w-8 h-8 cursor-pointer'></img>
          <div id="autocomplete-list" className="autocomplete-items "></div>  </div>
          <div className='mt-48'></div>
-        {filteredData.map(({ itemId, ...item }) => (
-          
-          <div className="my-6   px-2 shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] border-red-50"key={itemId}>
+        {
+        
+        filteredData.map(({ itemId, ...item }) => (
+         
+          <>
+          <div className="my-6   px-2 shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] border-red-50"key={item.name}>
             <select className="bg-gray-50 border  border-blue-500 text-gray-900 font-bold text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(event) => handleOptionChange(event, itemId)}>
-              {Object.keys(item).map((key) => {
+              {
+              
+              Object.keys(item).map((key) => {
                 if (key=="email" ) {
                   return (
 <><option className="font-bold" key={key} value={item[key]}>
                       {item[key]}
+                    </option>
+                    <option className="font-bold" key={"name"} value={item["name"]}>
+                      {item["name"]}
                     </option>
                     <option className="font-bold" key="MUNcount" value={item["MUNcount"]}>
                       {item["MUNcount"]}
@@ -245,8 +253,8 @@ const handleSubmit1 = (itemId) => {
                   );
                 }
                 
-               
-              })}
+                
+              }) }
             </select>
             <button className="bg-transparent ml-4 mx-auto 'block' hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 my-4 border border-blue-500 hover:border-transparent rounded" onClick={() => handleSubmit(itemId)}>Allot!</button>
           <div >
@@ -288,7 +296,7 @@ const handleSubmit1 = (itemId) => {
           </div>
 
   
-
+</>
         ))
         
         

@@ -78,7 +78,9 @@ let i=0;
  
     return (
       <div>
-        <Button className=" ml-4 my-4 block mx-auto"onClick={fetchData}>Load Data!</Button>
+        <Button className=" ml-4 my-4 block mx-auto"onClick={()=>{
+          console.log("done")
+          fetchData()}}>Load Data!</Button>
         <div className='flex justify-center gap-2'>
         <Image
           src="/images/active-nav-log.svg"
