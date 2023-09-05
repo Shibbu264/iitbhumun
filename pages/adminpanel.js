@@ -203,12 +203,45 @@ const handleSubmit1 = (itemId) => {
           <div className="my-6   px-2 shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] border-red-50"key={itemId}>
             <select className="bg-gray-50 border  border-blue-500 text-gray-900 font-bold text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(event) => handleOptionChange(event, itemId)}>
               {Object.keys(item).map((key) => {
-                if (key=="email"||key=="MUNcount"||key=="PastAwards"||key == "option6"||key == "option7"||key == "option8"||key == "option9"||key == "option1"||key == "option2"||key == "option3"||key == "option4"||key == "option5") {
+                if (key=="email" ) {
                   return (
-
-                    <option className="font-bold" key={key} value={item[key]}>
+<><option className="font-bold" key={key} value={item[key]}>
                       {item[key]}
                     </option>
+                    <option className="font-bold" key="MUNcount" value={item["MUNcount"]}>
+                      {item["MUNcount"]}
+                    </option>
+                    <option className="font-bold" key={"PastAwards"} value={item["PastAwards"]}>
+                    {item["PastAwards"]}
+                  </option>
+                  <option className="font-bold" key={"option6"} value={item["option6"]}>
+                  {item["option6"]}
+                </option>
+                <option className="font-bold" key={"option7"} value={item["option7"]}>
+                {item["option7"]}
+              </option>
+              <option className="font-bold" key={"option8"} value={item["option8"]}>
+              {item["option8"]}
+            </option>
+            <option className="font-bold" key={"option9"} value={item["option9"]}>
+            {item["option9"]}
+          </option>
+          <option className="font-bold" key={"option1"} value={item["option1"]}>
+          {item["option1"]}
+        </option>
+        <option className="font-bold" key={"option2"} value={item["option2"]}>
+        {item["option2"]}
+      </option>
+      <option className="font-bold" key={"option3"} value={item["option3"]}>
+      {item["option3"]}
+    </option>
+    <option className="font-bold" key={"option4"} value={item["option4"]}>
+    {item["option4"]}
+  </option>
+  <option className="font-bold" key={"option5"} value={item["option5"]}>
+  {item["option5"]}
+</option>
+</>
                   );
                 }
                 
