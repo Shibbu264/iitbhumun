@@ -152,7 +152,7 @@ const handleSubmit1 = (itemId) => {
   const divRefs = useRef([]);
   const filteredData = Object.keys(DATA).reduce((filtered, itemId) => {
     const item = DATA[itemId];
-    if (item.alloted === "NO") {
+    if (item.name) {
       filtered.push({ itemId, ...item });
     }
     return filtered;
@@ -231,9 +231,12 @@ useEffect(() => {
               Object.keys(item).map((key) => {
                 if (key=="email" ) {
                   return (
-<><option className="font-bold" key={key} value={item[key]}>
+<>{item["alloted"]==="NO"?<option className="font-bold" key={key} value={item[key]}>
                       {item[key]}
-                    </option>
+                    </option>:
+                    <option className="font-bold" key={"alloted"} value={item["alloted"]}>
+                      {item["alloted"]}
+                    </option>}
                     <option className="font-bold" key={"name"} value={item["name"]}>
                       {item["name"]}
                     </option>
