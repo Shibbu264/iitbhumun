@@ -9,7 +9,7 @@ import app from "../public/firebaseconfig";
 
 import { getDatabase, ref, get, set, onValue, update, } from 'firebase/database';
 import { getAuth } from 'firebase/auth';
-import { text } from '@fortawesome/fontawesome-svg-core';
+import { counter, text } from '@fortawesome/fontawesome-svg-core';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@material-tailwind/react';
@@ -148,7 +148,7 @@ const handleSubmit1 = (itemId) => {
       });
   };
  
-  
+  const [counter,setcounter]=useState(1);
   const filteredData = Object.keys(DATA).reduce((filtered, itemId) => {
     const item = DATA[itemId];
     if (item.alloted === "NO") {
@@ -156,7 +156,7 @@ const handleSubmit1 = (itemId) => {
     }
     return filtered;
   }, []);
-
+let count=1;
   if (!isLoggedIn) {
     return (
       <div>
@@ -201,9 +201,13 @@ const handleSubmit1 = (itemId) => {
         {
         
         filteredData.map(({ itemId, ...item }) => (
-         
+        
           <>
+         <h1 className="serial-number font-bold text-xl mx-6"> {count++}</h1>
           <div className="my-6   px-2 shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] border-red-50"key={item.name}>
+
+
+
             <select className="bg-gray-50 border  border-blue-500 text-gray-900 font-bold text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(event) => handleOptionChange(event, itemId)}>
               {
               
@@ -251,7 +255,7 @@ const handleSubmit1 = (itemId) => {
 </option>
 </>
                   );
-                }
+             }
                 
                 
               }) }
@@ -298,8 +302,7 @@ const handleSubmit1 = (itemId) => {
   
 </>
         ))
-        
-        
+       
         }
         <Script src="foradmin.js" typeof='module' type='module' />
       </div>
