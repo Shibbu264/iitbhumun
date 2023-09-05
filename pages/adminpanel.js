@@ -4,7 +4,7 @@
 // AdminPanel.js
 // AdminPanel.js
 // AdminPanel.js
-import React, { Component, useEffect, useState,} from 'react';
+import React, { Component, useEffect, useState,useRef} from 'react';
 import app from "../public/firebaseconfig";
 
 import { getDatabase, ref, get, set, onValue, update, } from 'firebase/database';
@@ -26,6 +26,7 @@ const AdminPanel = () => {
   const [inputValues, setInputValues] = useState({});
 const[delegate,setdelegate]=useState("Outstation");
 const [inputData,setinputadta]=useState("");
+
 
 
 // Create a query to find the relevant data entry based on the user's email
@@ -147,8 +148,8 @@ const handleSubmit1 = (itemId) => {
         alert("Error updating value:", error);
       });
   };
- 
-  const [counter,setcounter]=useState(1);
+  const [filterValue, setFilterValue] = useState('Search the name');
+  const divRefs = useRef([]);
   const filteredData = Object.keys(DATA).reduce((filtered, itemId) => {
     const item = DATA[itemId];
     if (item.alloted === "NO") {
@@ -157,6 +158,14 @@ const handleSubmit1 = (itemId) => {
     return filtered;
   }, []);
 let count=1;
+useEffect(() => {
+  if (divRefs.current.length > 0) {
+    const firstMatchingDiv = divRefs.current.find((el) => el.classList.contains('highlighted'));
+    if (firstMatchingDiv) {
+      firstMatchingDiv.scrollIntoView({ behavior: 'auto' });
+    }
+  }
+}, [filterValue]);
   if (!isLoggedIn) {
     return (
       <div>
@@ -196,15 +205,23 @@ let count=1;
         console.error('Failed to copy: ', err);
       }
     }} src='/images/copy.png' className='ml-3 hover:border-2 hover:border-red-500 hover:p-1 inline w-8 h-8 cursor-pointer'></img>
+     <input className='font-bold border-red-400 ml-4 border-x-4 border-y-4 p-3 my-3'
+  type="text"
+  placeholder="Type to filter..."
+  value={filterValue}
+  onChange={(event) => setFilterValue(event.target.value)}
+/>
          <div id="autocomplete-list" className="autocomplete-items "></div>  </div>
          <div className='mt-48'></div>
+        
+       
         {
         
-        filteredData.map(({ itemId, ...item }) => (
+        filteredData.map(({ itemId, ...item },index) => (
         
           <>
          <h1 className="serial-number font-bold text-xl mx-6"> {count++}</h1>
-          <div className="my-6   px-2 shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] border-red-50"key={item.name}>
+          <div ref={(el) => (divRefs.current[index] = el)}   className={`my-6 px-2 shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] border-red-50 ${item.name.includes(filterValue) ? 'highlighted' : ''}`} key={item.name}>
 
 
 

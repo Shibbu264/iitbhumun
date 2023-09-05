@@ -391,3 +391,6 @@ padding: 4px 6px;
 .hideit{
   display: block;
 }
+.highlighted {
+  background-color: yellow; /* You can use any color you prefer */
+}

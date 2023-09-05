@@ -31,14 +31,12 @@ const [inputData,setinputadta]=useState("");
       const data = await response.json();
       
       setDATA(data)
+      console.log("data capture done")
     } catch (error) {
       console.error('Error:', error);
     }
   }
-  
-//   useEffect(() => {
-//  fetchPreferencesData()
-//   },
+
   
 
   
@@ -74,7 +72,7 @@ let i=0;
     }
     return filtered;
   }, []);
-
+console.log(filteredData)
  
     return (
       <div>
