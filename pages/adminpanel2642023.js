@@ -115,6 +115,7 @@ onChange={(event) => setFilterValue(event.target.value)}
                   return (
                     <>
                     <h1 className="serial-number font-bold text-xl mx-6"> {count++}</h1>
+                    <h1 className='mx-auto text-center font-bold text-2xl'>{item["name"]}</h1>
 <h1 className='mx-auto text-center font-bold text-2xl'>{item["email"]}</h1>
 <h1 className='mx-auto text-center font-bold text-2xl'>{item["Delegate_type"]}</h1>
 <a href={item["PaymentSS"]} target='_blank' rel='noreferrer'><img className={'w-52 h-52   '} src={item["PaymentSS"]}/></a>
