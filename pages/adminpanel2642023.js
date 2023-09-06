@@ -111,7 +111,7 @@ onChange={(event) => setFilterValue(event.target.value)}
           <div ref={(el) => (divRefs.current[index] = el)} className={`my-6 px-2 shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] border-red-50 ${item.name.includes(filterValue) ? 'highlighted' : ''}`}key={itemId}>
            
               {Object.keys(item).map((key) => {
-                if (key=="PaymentSS"&&item["PaymentSS"]!="") {
+                if (key=="PaymentSS") {
                   return (
                     <>
                     <h1 className="serial-number font-bold text-xl mx-6"> {count++}</h1>
