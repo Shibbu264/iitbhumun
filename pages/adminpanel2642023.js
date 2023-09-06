@@ -77,9 +77,9 @@ let i=0;
 
   const filteredData = Object.keys(DATA).reduce((filtered, itemId) => {
     const item = DATA[itemId];
-    if (item.Payment_done === "NO") {
+  
       filtered.push({ itemId, ...item });
-    }
+    
     return filtered;
   }, []);
 console.log(filteredData)
@@ -111,7 +111,7 @@ onChange={(event) => setFilterValue(event.target.value)}
           <div ref={(el) => (divRefs.current[index] = el)} className={`my-6 px-2 shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] border-red-50 ${item.name.includes(filterValue) ? 'highlighted' : ''}`}key={itemId}>
            
               {Object.keys(item).map((key) => {
-                if (key=="PaymentSS") {
+                if (key=="PaymentSS"&&item["PaymentSS"]!="") {
                   return (
                     <>
                     <h1 className="serial-number font-bold text-xl mx-6"> {count++}</h1>
