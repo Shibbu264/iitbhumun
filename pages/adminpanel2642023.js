@@ -77,9 +77,9 @@ let i=0;
 
   const filteredData = Object.keys(DATA).reduce((filtered, itemId) => {
     const item = DATA[itemId];
-  
+  if(item.Payment_done){
       filtered.push({ itemId, ...item });
-    
+  }
     return filtered;
   }, []);
 console.log(filteredData)
