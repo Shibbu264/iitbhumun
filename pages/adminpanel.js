@@ -234,7 +234,7 @@ useEffect(() => {
 <>{item["alloted"]==="NO"?<option className="font-bold" key={key} value={item[key]}>
                       {item[key]}
                     </option>:
-                    <option className="font-bold" key={"alloted"} value={item["alloted"]}>
+                    <option className="font-bold bg-blue-gray-400" key={"alloted"} value={item["alloted"]}>
                       {item["alloted"]}
                     </option>}
                     <option className="font-bold" key={"name"} value={item["name"]}>
