@@ -403,13 +403,13 @@ else{ document.getElementById("paymentqr").src="/images/599.jpg"}
              
             
             }
-             else{
+             else if(item["Registration_type"]=="Double Delegates"){
               Object.keys(item).forEach((key) => {
                 if(key=="p_name2"){document.getElementById("paymentqr").src="/images/1599_2.jpg"
               
-              }
+              }})}
                 else{ document.getElementById("paymentqr").src="/images/1599.jpg"}
-                                  })}
+                                  
              document.getElementById("paymentqr").style.display="block"
              document.getElementById("paymentqr").style.width="520px"
               document.getElementById("paymentqr").style.height="540px"
