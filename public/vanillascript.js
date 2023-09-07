@@ -38,7 +38,7 @@ function  uploadPhoto() {
   const file = fileInput.files[0];
 console.log(file)
   if (!file) {
-    console.error('No file selected.');
+    alert('No file selected.');
     return;
   }
 
@@ -103,7 +103,8 @@ PaymentSS:localStorage.getItem("url1"),
           })
             .then(() => {
               
-              document.getElementById("afterpayment").innerHTML="<h1 class='text-2xl text-center font-semibold'>We have received your payment screenshot,We will verify and update the portal soon.</h1>"
+              document.getElementById("afterpayment").innerHTML="<h1 class='text-2xl mt-16 text-center font-semibold'>We have received your payment screenshot,We will verify and update the portal soon.</h1>"
+              alert("We have received your payment screenshot,We will verify and update the portal soon.")
             })
             .catch((error) => {
 
@@ -417,13 +418,18 @@ else{ document.getElementById("paymentqr").src="/images/599.jpg"}
             
             
             }}
-            if(key=="PaymentSS"&&item[key]!=""){
+            if(key=="PaymentSS"&&item["PaymentSS"]!=""){
               document.getElementById("afterpayment").innerHTML="<h1 class='text-2xl text-['#A3CF3A'] text-center font-semibold'>We have received your payment screenshot,We will verify and update the portal soon.</h1>"
+              document.getElementById("afterpayment").style.display="block"
+              document.getElementById("showresult").style.display="block"
+              document.getElementById("showresult").innerHTML+=`We have received your payment screenshot,We will verify and update the portal soon.`
             }
             if(key=="Payment_done"&&item[key]!="NO"){
               document.getElementById("progressvalue").innerHTML=`100%`
               document.getElementById("progressvalue2").style.width="100%"
-              document.getElementById("ssform1").innerHTML="<h1 class='mt-4 text-2xl text-['#A3CF3A']'>Payment Completed! You are all set for IIT BHU MUN 2023.</h1>"
+              document.getElementById("showresult").innerHTML+=` Your Payment is completed and portfolio is locked!`
+             
+            
             
     if(item["Referralcode"]!=null){
       const snapshot = get(ref(database, "Referral_program/"))

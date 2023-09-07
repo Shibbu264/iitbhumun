@@ -261,7 +261,7 @@ const[editprofile,setprofile]=useState(true)
          <img  src="/images/join.svg" id="paymentqr" className="inline mx-auto mt-3 hidden"/>
          <form className="hidden my-3" id="ssform">
          
-         <input type="file" id="photoInput1"/>
+         <input className="bg-white mt-6" type="file" id="photoInput1"/>
          <Button id="ssbutton" className="block mx-auto my-3">Upload</Button></form>
           </div></div>
           <div className=" h-cover border-l-2 border-gray-500">
