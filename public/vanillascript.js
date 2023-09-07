@@ -427,7 +427,9 @@ else{ document.getElementById("paymentqr").src="/images/599.jpg"}
             if(key=="Payment_done"&&item[key]!="NO"){
               document.getElementById("progressvalue").innerHTML=`100%`
               document.getElementById("progressvalue2").style.width="100%"
-              document.getElementById("showresult").innerHTML+=` Your Payment is completed and portfolio is locked!`
+              let zd=document.getElementById("showresult").textContent
+              let tt=zd.replace("We have received your payment screenshot,We will verify and update the portal soon."," ")
+              document.getElementById("showresult").innerHTML=tt+`<br> Your Payment is completed and portfolio is locked!`
              
             
             
