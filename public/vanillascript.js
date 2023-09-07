@@ -304,7 +304,7 @@ document.getElementById("content").innerHTML = "<div class='loader m-auto'></div
             }
                 else{
                   Object.keys(item).forEach((key) => {
-if(key=="p_name2"){document.getElementById("paymentqr").src="/images/599.jpg"}
+if(key=="p_name2"){document.getElementById("paymentqr").src="/images/599_2.jpg"}
 else{ document.getElementById("paymentqr").src="/images/599.jpg"}
                   })
                   
@@ -355,7 +355,7 @@ else{ document.getElementById("paymentqr").src="/images/599.jpg"}
                 
                 
                else{   Object.keys(item).forEach((key) => {
-                if(key=="p_name2"){document.getElementById("paymentqr").src="/images/1099.jpg"}
+                if(key=="p_name2"){document.getElementById("paymentqr").src="/images/1099_2.jpg"}
                 else{ document.getElementById("paymentqr").src="/images/1099.jpg"}
                                   })}
               document.getElementById("paymentqr").style.display="block"
