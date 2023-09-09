@@ -184,7 +184,7 @@ const[buttondisplay,setdisplay]=useState(false)
   const[boolcheck,setbool1]=useState(true)
   data.registerCommittees.map((i) => {
     
-if((i!='UNCSW'&&i!='UNFCCC'&&i!='JPC')&&boolcheck==false){}
+if((i!="None"&&i!='UNCSW'&&i!='UNFCCC'&&i!='JPC'&&i!="G-20")&&boolcheck==false){}
 else{committees.push(i);}
   });
   
