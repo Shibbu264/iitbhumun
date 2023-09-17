@@ -268,7 +268,7 @@ const[editprofile,setprofile]=useState(true)
             
           </div></div>
          
-            <h1 className="text-[#abcf3a] mt-4 text-2xl">Need Accomodation?</h1><a target="_blank"  className="text-white text-2xl hover:text-blue-gray-200 hover:underline-offset-1" href="https://forms.gle/6hR469cqZxwxD3UdA">Click here!</a>
+            <h1 className="text-[#abcf3a] mt-4 text-2xl">Need Accomodation?</h1><a target="_blank" rel="noreferrer"  className="text-white text-2xl hover:text-blue-gray-200 hover:underline-offset-1" href="https://forms.gle/6hR469cqZxwxD3UdA">Click here!</a>
        
 <div className="mt-28 ">
 
