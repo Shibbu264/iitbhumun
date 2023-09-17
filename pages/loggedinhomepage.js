@@ -267,7 +267,11 @@ const[editprofile,setprofile]=useState(true)
           <div className=" h-cover border-l-2 border-gray-500">
             
           </div></div>
+          <div className="text-[#abcf3a] mt-4 text-2xl">
+            <h1>Need Accomodation?</h1><a target="_blank" className="text-white hover:text-blue-gray-200 hover:underline-offset-1" href="https://forms.gle/6hR469cqZxwxD3UdA">Click here!</a>
+          </div>
 <div className="mt-28 ">
+
 <h1 id="ddportfolio" className="  text-4xl font-extrabold leading-none tracking-tight text-[#189BA5] mb-12 md:text-5xl lg:text-6xl dark:text-[#189BA5]">My Portfolio</h1>
         
           <div className={` sm:flex sm:justify-between  block mx-auto`} id= "showportfolio"  >
