@@ -45,7 +45,7 @@ export default function Secretariat() {
 
           
             <div>
-                <div className='flex bg-white mt-24 w-[350px] sm:w-[80%] sm:max-w-[1500px]  m-auto gap-32 flex-wrap justify-center p-10'>
+                <div className='flex ] mt-24 w-[350px] sm:w-[80%] sm:max-w-[1500px]  m-auto gap-32 flex-wrap justify-center p-10'>
                     {data.vertical.map((i) => {
                         return (
                             <TeamCard
@@ -61,6 +61,7 @@ export default function Secretariat() {
                                 member7={i.member7||""}
                                 member8={i.member8||""}
                                 member9={i.member9||""}
+                                img={i.img}
                             />
                         )
 

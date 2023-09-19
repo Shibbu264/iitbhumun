@@ -394,3 +394,6 @@ padding: 4px 6px;
 .highlighted {
   background-color: yellow; /* You can use any color you prefer */
 }
+.fragment{
+  animation: shakeAndRotate 2.4s infinite;
+}

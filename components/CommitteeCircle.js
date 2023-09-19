@@ -15,7 +15,7 @@ export default function CommitteeCircle(props) {
                 onClick={handleChange} 
                 className="mx-2 w-[13.313rem] h-[13.313rem]  shadow-[#189BA5]/20  background-[white] top-[12.5rem] left-[9.836rem]"
             >
-                <div className="flex flex-col items-center ">
+                <div className="flex flex-col items-center fragment ">
             
                         <Image className="  "
                             src={props.src}

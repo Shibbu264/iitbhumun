@@ -256,47 +256,50 @@
     {
       "id": 1,
       "vertical": "Publicity",
-      "member1": "Avantika",
-      "member2": "Anupama",
+      "member1": "Rachit",
+      "member2": "Shivansh",
       "member3": "Mridul",
       "member4": "Bhavesh",
-      "member5": "Deepak",
+      "member5": "Aditya",
       "member6": "Virat",
       "member7": "Arushi",
-      "member8": "Shivansh"
+      "member8": "Shivansh",
+      "img":"/images/3.svg"
     },
     {
       "id": 1,
       "vertical": "Committee Affairs",
-      "member1": "Bhavya",
+      "member1": "Mayank",
       "member2": "Kanishk",
       "member3": "Aishi",
       "member4": "Ron",
       "member5": "Aarya",
       "member6": "Arnipa",
       "member7": "Satyam",
-      "member8": "Mayank"
+      "img":"/images/7.svg"
+      
 
     },
     {
       "id": 1,
       "vertical": "Tech",
       "member1": "Shivanshu",
-      "member2": "Chaitanya"
+      "member2": "Chaitanya",
+      "img":"/images/4.svg"
      
     },
     {
       "id": 1,
       "vertical": "Creative Team",
-      "member1": "Aarushi",
-      "member2": "Shivansh",
-      "member3": "Ricktho",
-      "member4": "Jatasya",
-      "member5": "Ranya",
+   
+      "member1": "Ricktho",
+     
+      "member2": "Ranya",
     
-      "member6": "Hemanth",
-      "member7": "Anjali",
-      "member8": "Akruti"
+      "member3": "Hemanth",
+      "member4": "Anjali",
+      "img":"/images/undraw_content_team_re_6rlg.svg"
+      
       
     },
     {
@@ -304,19 +307,20 @@
       "vertical": "Public Relations",
       "member1": "Pulkit",
       "member2": "Siddhi ",
-      "member3": "Naini"
+      "member3": "Naini",
+      "img":"/images/2.svg"
     },
     {
       "id": 1,
       "vertical": "Marketing",
       "member1": "Tilak",
-      "member2": "Abhinav ",
-      "member3": "Aditya",
-      "member4": "Smarth",
-      "member5": "Agrim",
-      "member6": "Jatin",
-      "member7": "Shrusti",
-      "member8": "Aarushi"
+    
+      "member2": "Smarth",
+      "member3": "Agrim",
+      "member4": "Jatin",
+  
+      "member5": "Aarushi",
+      "img":"/images/undraw_savings_re_eq4w.svg"
 
     },
    
@@ -324,7 +328,8 @@
       "id": 1,
       "vertical": "Hospitality & Logistics",
       "member1": "Rachit",
-      "member2": "Shivansh"
+      "member2": "Shivansh",
+      "img":"/images/5.svg"
       
     }
    
