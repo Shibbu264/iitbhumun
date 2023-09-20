@@ -108,7 +108,7 @@ onChange={(event) => setFilterValue(event.target.value)}
 <div className='mt-72'></div>
         {filteredData.map(({ itemId, ...item },index) => (
         <> 
-          <div ref={(el) => (divRefs.current[index] = el)} className={`my-6 px-2 shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] border-red-50 ${item.name.includes(filterValue) ? 'highlighted' : ''}`}key={itemId}>
+          <div ref={(el) => (divRefs.current[index] = el)} className={`my-6 px-2 ${item.Payment_done=="YES"?'bg-[orange]':''} shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] border-red-50 ${item.name.includes(filterValue) ? 'highlighted' : ''}`}key={itemId}>
            
               {Object.keys(item).map((key) => {
                 if (key=="PaymentSS"&&item["PaymentSS"]!="") {
