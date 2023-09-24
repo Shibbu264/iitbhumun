@@ -210,7 +210,7 @@ useEffect(() => {
   placeholder="Type to filter..."
   value={filterValue}
   onChange={(event) => setFilterValue(event.target.value)}
-/>
+/><Button className='ml-8' onClick={()=>{setFilterValue("")}}>Clear text!</Button>
          <div id="autocomplete-list" className="autocomplete-items "></div>  </div>
          <div className='mt-48'></div>
         
