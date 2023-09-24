@@ -25,7 +25,9 @@ export default async function handler(req, res) {
         model: 'gpt-3.5-turbo',
        messages:[{"role":"user","content":`"questions": [
         ${prompt}
-        read the below text if above question is related to MUN the below text is with respect to iit bhu mun,else answer the above query 
+        if the above prompt  contains words like (MUN,IIT BHU MUN,secreteriat, teams,members,Who are you etc) then read the below text else answer the prompt according to your brain
+        
+        the below text is with respect to iit bhu mun 
         {Birthday today-Chetan Chavan,Secretary-General IIT BHU MUN
           I am IIT BHU MUN BOT,I am a part of IIT BHU MUN Secreteriat and team.I answer queries related to IIT BHU MUN.
        

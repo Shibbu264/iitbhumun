@@ -1,6 +1,6 @@
 import Link from "next/link";
-import React, { useState } from "react";
-
+import React, { useState,useEffect } from "react";
+import axios from "axios";
 const Doubtbox = () => {
   const [doubt, setDoubt] = useState("");
   const [botResponse, setBotResponse] = useState("");
@@ -14,41 +14,46 @@ const Doubtbox = () => {
   };
 
   const OPENAI_API_KEY = process.env.OPENAIKEY; // Replace with your OpenAI API key
+  useEffect(() => {
+    if (isLoading) {
+      // Replace 'yourDivId' with the actual ID or reference of the div you want to scroll to
+      const element = document.getElementById('yourDivId');
 
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [isLoading]);
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    // Send a POST request to your API to get a response based on the doubt
+    
     try {
-      const response = await fetch('/api/ai', {
-        method: "POST",
+      const response = await axios.post('/api/ai', {
+        'model': 'text-davinci-003',
+        'prompt': doubt,
+      }, {
         headers: {
-          "Content-Type": "application/json",
-          'Authorization': `Bearer ${OPENAI_API_KEY}`
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${OPENAI_API_KEY}`,
         },
-        body: JSON.stringify({
-          'model': 'text-davinci-003',
-          'prompt': doubt,
-        })
       });
-
-      if (response.ok) {
-        const data = await response.json();
-        const botResponse = data.botResponse; // Extract bot response here
+  
+      if (response.status === 200) {
+        const botResponse = response.data.botResponse;
         setBotResponse(botResponse);
-
+        
         // Add the user's input and bot's response to the messages array
-        setMessages([...messages, { role: "user", content: doubt }, { role: "bot", content: botResponse }]);
+        setMessages([...messages, { role: 'user', content: doubt }, { role: 'bot', content: botResponse }]);
         setIsLoading(false);
-        setDoubt("");
+        setDoubt('');
       } else {
         setIsLoading(false);
-        setMessages([...messages, { role: "user", content: doubt }, { role: "bot", content: "Failed to get a response from the server." }]);
-       
+        setMessages([...messages, { role: 'user', content: doubt }, { role: 'bot', content: 'Failed to get a response from the server.' }]);
       }
     } catch (error) {
       setIsLoading(false);
-      setMessages([...messages, { role: "user", content: doubt }, { role: "bot", content: "Failed to get a response from the server." }]);
+      setMessages([...messages, { role: 'user', content: doubt }, { role: 'bot', content: 'Failed to get a response from the server.' }]);
     }
   };
 
@@ -171,7 +176,7 @@ const Doubtbox = () => {
             ))}
             {isLoading ? (
   <div className="flex items-center justify-center">
-    <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500"></div>
+    <div id="yourDivId" className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500"></div>
   </div>
 ) : (
   <></>
