@@ -23,6 +23,7 @@
     "framer-motion": "^10.12.22",
     "next": "12.3.1",
     "nodemailer": "^6.9.3",
+    "openai": "^4.10.0",
     "paytmchecksum": "^1.5.0",
     "react": "^18.2.0",
     "react-countdown": "^2.3.3",

@@ -7,6 +7,7 @@ import { getAuth } from "firebase/auth";
 import NavBar2 from "../components/navbarforlogin.js";
 import { useState } from 'react';
 import Doubtbox from "../components/doubtbox.js";
+import Script from "next/script.js";
 const arr = data.committees;
 
 export default function Committees() {
@@ -263,6 +264,7 @@ export default function Committees() {
             </div>
             <Doubtbox/>
             <Footer />
+            <Script src="ai.js" typeof='module' type='module'></Script>
         </div>
     );
 }
