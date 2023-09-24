@@ -3,9 +3,10 @@ import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/react';
 import '../styles/globals.css';
 import { motion } from 'framer-motion';
-
+import Clientside from '../components/clientside';
 function MyApp({ Component, pageProps,router }) {
   return (
+    <Clientside>
     <ThemeProvider>
       <Head>
         <title>IITBHU MUN</title>
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps,router }) {
       <Component {...pageProps} /></motion.div>
       <Analytics />
     </ThemeProvider>
+    </Clientside>
   );
 }
 

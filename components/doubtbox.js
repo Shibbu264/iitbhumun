@@ -29,7 +29,7 @@ const Doubtbox = () => {
     setIsLoading(true);
     
     try {
-      const response = await axios.post('/api/ai', {
+      const response = await axios.post("/api/ai", {
         'model': 'text-davinci-003',
         'prompt': doubt,
       }, {
@@ -39,7 +39,7 @@ const Doubtbox = () => {
         },
       });
   
-      
+
       if (response.status === 200) {
         const botResponse = response.data.botResponse;
         setBotResponse(botResponse);

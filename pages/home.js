@@ -7,6 +7,7 @@ import { getAuth ,onAuthStateChanged} from 'firebase/auth';
 import NavBar2 from '../components/navbarforlogin';
 import Doubtbox from '../components/doubtbox';
 import Footer2 from '../components/footerforlogin';
+import Clientside from '../components/clientside';
 
 export default function Home() {
 
@@ -33,6 +34,7 @@ export default function Home() {
   }, []);
 
   return (
+    <Clientside>
     <div className="bg-[#FFFFFF] font-semibold">
      {changebar? <NavBar navbar={true} backgroundColor={ab} qt=''  />:<NavBar2 navbar={true} backgroundColor="white" />}
       
@@ -42,5 +44,6 @@ export default function Home() {
      {changebar? <Footer />:<Footer2/>}
 
     </div>
+    </Clientside>
   );
 }
