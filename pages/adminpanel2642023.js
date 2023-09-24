@@ -106,7 +106,9 @@ type="text"
 placeholder="Type to filter..."
 value={filterValue}
 onChange={(event) => setFilterValue(event.target.value)}
-/></div>
+/>
+<Button className='ml-8' onClick={()=>{setFilterValue("")}}>Clear text!</Button>
+</div>
 <div className='mt-72'></div>
         {filteredData.map(({ itemId, ...item },index) => (
         <> 
