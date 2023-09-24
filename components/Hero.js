@@ -75,50 +75,28 @@ export default function Hero() {
         </div> 
       </div>
       <div className="grid sm:hidden">
-        <div className="row-span-full col-span-full">
-          <Image className='relative'
-            src="/images/mobile-hero-bg.png"
-            width={1079}
-            height={2318}
-          
-            layout="responsive"
-            alt="hero images"
-          />
-            <div className="row-span-full absolute bottom-96 block left-0 right-0 col-span-full self-center text-center z-10  "  data-te-animation-init
-  data-te-animation-start="onScroll"
-  data-te-animation-on-scroll="repeat"
-  data-te-animation-reset="true"
-  data-te-animation="[slide-right_1s_ease-in-out]">
-          <Image className=''
-            src="/images/hero-logo.svg"
-            width={300}
-            height={123.7}
-            alt="hero images"
-          />
-         
-        </div>
-            {/* <div className='z-10 absolute top-96 bottom-0 left-0 right-0'>
-        
-        <h1 className=' finaldate text-3xl text-center text-[#fff] whitespace-nowrap md:text-6xl mt-18  mx-auto border-[#fff] border-solid'>29 SEPT - 1 OCT</h1>
-       
-        </div> */}
-          {changebar? <Link href={'/registerpage'}><button className='absolute block mx-auto t-0 left-0 w-52 right-0 z-10 bottom-52 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-2xl px-4 p-4 rounded-xl'>Register now!</button></Link>:<Button onClick={()=>{window.location.replace("/loggedinhomepage")}} className='absolute block mx-auto t-0 left-0 w-52 right-0 z-10 bottom-52 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-2xl px-4 p-4 rounded-xl'>View Profile</Button>}
-        </div>
-        <div className="row-span-full col-span-full">
-          <Image
-            src="/images/hero-filter.png"
-            width={1079}
-            height={2318}
-            layout="responsive"
-            alt="hero images"
-          />
-        </div>
-      
-        
-          
-        
-       
-        </div>
+  <div className="row-span-full bg-cover bg-center bg-no-repeat mt-36 col-span-full" style={{ backgroundImage: 'url("/images/mobile-hero-bg.png")' }}>
+    {/* Your content here */}
+  </div>
+  <div className="row-span-full col-span-full relative mt-20">
+    {/* Background Filter */}
+    <div className="absolute top-0 left-0 w-full h-full" style={{ backgroundImage: 'url("/images/hero-filter.png")' }}></div>
+    
+    {/* Content and Buttons */}
+    <div className=" relative">
+      <img className="w-72 mt-10 mx-auto mb-12" src="/images/hero-logo.svg" alt="hero images" />
+      <h1 className="finaldate text-5xl text-center text-[#fff] whitespace-nowrap md:text-6xl mt-18 mx-auto border-[#fff] border-solid">29 SEPT - 1 OCT</h1>
+      {changebar ? (
+        <Link href={'/registerpage'}>
+          <button className="block mx-auto t-0 left-0 w-52 my-16 right-0 bottom-52 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-2xl px-4 p-4 rounded-xl">Register now!</button>
+        </Link>
+      ) : (
+        <Button onClick={() => { window.location.replace("/loggedinhomepage") }} className="block my-16 mx-auto t-0 left-0 w-52 right-0 bottom-52 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-2xl px-4 p-4 rounded-xl">View Profile</Button>
+      )}
+    </div>
+  </div>
+</div>
+
       </div>
      
   );

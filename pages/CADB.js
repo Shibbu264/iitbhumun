@@ -285,6 +285,7 @@ else{
       </div>
       <Doubtbox/>
       <Footer2 />
+      <Doubtbox/>
       <Script src="vanillascript2.js" typeof='module' type='module' />
       </div>
     );

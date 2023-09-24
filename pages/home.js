@@ -35,6 +35,7 @@ export default function Home() {
   return (
     <div className="bg-[#FFFFFF] font-semibold">
      {changebar? <NavBar navbar={true} backgroundColor={ab} qt=''  />:<NavBar2 navbar={true} backgroundColor="white" />}
+      
       <Hero />
       <Main />
       <Doubtbox/>

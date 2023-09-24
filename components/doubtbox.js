@@ -65,7 +65,7 @@ const Doubtbox = () => {
   return (
     <div id="titu99" className="fixed bottom-4 right-4">
     {isExpanded ? (
-      <div className="bg-gray-100 max-w-2xl w-96 min-h-96  px-4 py-2 border-2 border-black rounded-2xl shadow">
+      <div className="bg-gray-100 max-w-2xl w-96 z-30 min-h-96 absolute l-0  bottom-0 right-0 px-4 py-2 border-2 border-black rounded-2xl shadow">
         <div className="flex">
          
  <div>
