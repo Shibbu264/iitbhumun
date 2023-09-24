@@ -42,10 +42,12 @@ const Doubtbox = () => {
         setIsLoading(false);
         setDoubt("");
       } else {
+        setIsLoading(false);
         setMessages([...messages, { role: "user", content: doubt }, { role: "bot", content: "Failed to get a response from the server." }]);
        
       }
     } catch (error) {
+      setIsLoading(false);
       setMessages([...messages, { role: "user", content: doubt }, { role: "bot", content: "Failed to get a response from the server." }]);
     }
   };
