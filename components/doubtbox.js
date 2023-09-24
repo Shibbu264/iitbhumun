@@ -39,6 +39,7 @@ const Doubtbox = () => {
         },
       });
   
+      
       if (response.status === 200) {
         const botResponse = response.data.botResponse;
         setBotResponse(botResponse);
