@@ -1,5 +1,5 @@
 import {  OpenAI } from 'openai';
-const apiKey = "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";
+const apiKey = process.env.OPENAIKEY;
 const openai = new OpenAI({apiKey});
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -22,7 +22,8 @@ export default async function handler(req, res) {
        messages:[{"role":"user","content":`"questions": [
         ${prompt}
         read the below text if above question is related to MUN the below text is with respect to iit bhu mun,else answer the above query 
-        {
+        {Birthday today-Chetan Chavan,Secretary-General IIT BHU MUN
+          You are IIT BHU MUN BOT,You are part of IIT BHU MUN Secreteriat and team.You answer queries related to IIT BHU MUN
         website: iitbhumun.com
         Accomodation charges-999 perday
         delegate registration fee

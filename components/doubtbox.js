@@ -9,11 +9,11 @@ const Doubtbox = () => {
   const [isLoading, setIsLoading] = useState(false);
   const handleInputChange = (e) => {
     setDoubt(e.target.value);
-    e.target.style.height = "auto";
-    e.target.style.height = `${e.target.scrollHeight}px`;
+    // e.target.style.height = "auto";
+    // e.target.style.height = `${e.target.scrollHeight}px`;
   };
 
-  const OPENAI_API_KEY = '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'; // Replace with your OpenAI API key
+  const OPENAI_API_KEY = process.env.OPENAIKEY; // Replace with your OpenAI API key
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -127,8 +127,8 @@ const Doubtbox = () => {
         <h1 className="font-bold text-lg text-blue-500 mb-4">Chat with me!</h1>
         {/* ... Rest of your code */}
         <form onSubmit={handleSubmit}>
-  <input
-    className="min-w-64 sm:w-80 h-16 py-4 text-black border-2 placeholder-red-500 border-black resize-none rounded p-2 mb-4 focus:outline-none focus:border-blue-400"
+  <textarea
+    className="min-w-64 h-32 text-xl peer sm:w-80  rounded-lg  leading-[1.6] outline-none transition-all duration-200 ease-linear py-4    text-black border-2 placeholder-red-500 border-black   p-2 mb-4 focus:outline-none focus:border-blue-400"
     placeholder="Enter your doubts here..."
     value={doubt}
     onChange={handleInputChange}
