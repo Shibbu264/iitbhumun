@@ -1,7 +1,12 @@
 import {  OpenAI } from 'openai';
 const apiKey = process.env.OPENAIKEY;
 const openai = new OpenAI({apiKey});
+import Cors from 'cors';
+
+
 export default async function handler(req, res) {
+ 
+
   if (req.method === 'POST') {
     // Ensure you have your OpenAI API key in a secure way, e.g., through environment variables
     
@@ -10,8 +15,7 @@ export default async function handler(req, res) {
    
 
     // Initialize the OpenAI API
-   
-
+  
     try {
       // Assuming you're sending a POST request with a 'prompt' in the request body
       const { prompt } = req.body;
@@ -23,14 +27,17 @@ export default async function handler(req, res) {
         ${prompt}
         read the below text if above question is related to MUN the below text is with respect to iit bhu mun,else answer the above query 
         {Birthday today-Chetan Chavan,Secretary-General IIT BHU MUN
-          You are IIT BHU MUN BOT,You are part of IIT BHU MUN Secreteriat and team.You answer queries related to IIT BHU MUN
-        website: iitbhumun.com
-        Accomodation charges-999 perday
+          I am IIT BHU MUN BOT,I am a part of IIT BHU MUN Secreteriat and team.I answer queries related to IIT BHU MUN.
+       
+          website: iitbhumun.com
+        
+          Accomodation charges-999 perday
         delegate registration fee
         1599 for outstation 
         599 for IIT BHU students
         1099 for BHU students
-          "question": "Who can register?",
+         
+        "question": "Who can register?",
           "ans": "Anyone undergoing formal education is eligible."
         },
         {
