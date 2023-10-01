@@ -2,7 +2,7 @@ import React from 'react'
 
 const CloseReg = () => {
     return (
-        <div role="alert" className='z-4'>
+        <div role="alert" className=''>
             <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
                 Sorry!!
             </div>

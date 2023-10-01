@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Alert } from "@material-tailwind/react";
 import {
   Menu,
   MenuHandler,
@@ -9,11 +10,30 @@ import {
 import { useState } from 'react';
 import Register from './CloseReg';
 
-
+function Icon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      className="h-6 w-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+      />
+    </svg>
+  );
+}
+ 
 export default function NavBar({ navbar,backgroundColor,qt}) {
 
   const [closeReg, setCloseReg] = useState(true);
   const [display, buttonhide] = useState(false);
+  const [Register,setRegistration]=useState(true);
   const handleChange = () => {
     setCloseReg(false);
     setTimeout(() => {
@@ -66,16 +86,20 @@ export default function NavBar({ navbar,backgroundColor,qt}) {
               FAQ
             </button>
           </Link><div>
-<Link href="/registerpage">
+
   
-         <button 
+        { Register?<button onClick={()=>{setRegistration(false)
+        setTimeout(() => {
+          setRegistration(true)
+        }, 2000);
+      }}
             className={'px-12 2xl:px-12 h-10 rounded-md text-xl font-semibold mx-2 text-black bg-[#ABCF3A] hover:bg-yellow-300'
               }
           >
             Register
-          </button ></Link>
+          </button >: <Alert className=' flex bg-red-500' icon={<Icon />}>Registrations for current edition is now over!</Alert>}
           <Link href="/loginpage">
-         <button onClick={handleChange}
+         <button onClick={handleChange} 
             className={`px-12 2xl:px-12 h-10 targetDiv rounded-md text-xl font-semibold mx-4  text-black bg-[#ABCF3A] hover:bg-yellow-300 ${qt} `}
           >
             Login
@@ -121,9 +145,18 @@ export default function NavBar({ navbar,backgroundColor,qt}) {
           />
         </div>
        
-          <button onClick={handleChange} className="py-2 px-[1.5rem] text-xs font-custom font-semibold text-white bg-[#A3B63A] rounded-lg">
-            <Link href={'/registerpage'}>Register</Link>
-          </button>
+         
+          { Register?<button onClick={()=>{setRegistration(false)
+        setTimeout(() => {
+          setRegistration(true)
+        }, 2000);
+      }}
+            className={'py-2 px-[1.5rem] text-xs font-custom font-semibold text-white bg-[#A3B63A] rounded-lg'
+              }
+          >
+            Register
+          </button >: <Alert className='bg-red-500 flex' icon={<Icon/>}>Registrations for current edition is now over!</Alert>}
+
           <button  className="py-2 px-[1.5rem] text-xs font-custom font-semibold text-white bg-[#A3B63A] rounded-lg">
                  <Link href={'/loginpage'}>    Login</Link> 
                 </button>

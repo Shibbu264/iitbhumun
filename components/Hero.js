@@ -46,8 +46,8 @@ export default function Hero() {
           <h1 className='finaldate1 text-4xl text-[#B6FF1A] whitespace-nowrap text-left md:text-8xl mt-72 ml-24 border-[#fff] border-solid'>IIT BHU MODEL</h1>
           <h1 className='finaldate2 text-4xl text-[#B6FF1A] text-left whitespace-nowrap md:text-8xl ml-24'>UNITED NATIONS</h1>
           <h1 className='finaldate3 typewriter text-3xl text-[#fff] mt-4 text-left my-2 whitespace-nowrap md:text-6xl ml-24'>RISE.SPEAK.RESOLVE</h1>
-          {changebar?<div className='flex gap-24 justify-center ml-4 mt-14'><Link href={'/registerpage'}><button className='bg-[#B6FF1A] hover:bg-[#ABCF3A]  text-4xl px-12 p-4 rounded-lg'>Register</button></Link>
-         <Link href={'/loginpage'}><button className='bg-[#B6FF1A] hover:bg-[#ABCF3A]  text-4xl p-4 px-12 rounded-lg mr-32'>Login</button></Link></div>:<Button onClick={()=>{window.location.replace("/loggedinhomepage")}} className='block bg-[#B6FF1A] text-black-500  mx-auto my-8 text-4xl'>View Profile</Button>}
+          {changebar?<div className='flex gap-24 justify-center ml-4 mt-14'><Link href={'/clarion'}><button className='bg-[#B6FF1A] hover:bg-[#ABCF3A]  text-4xl px-12 p-4 rounded-lg'>View 12th Edition Clarion</button></Link>
+        </div>:<Button onClick={()=>{window.location.replace("/loggedinhomepage")}} className='block bg-[#B6FF1A] text-black-500  mx-auto my-8 text-4xl'>View Profile</Button>}
           </div>
           <div className='rightside block mr-28'>
         <img className='block mb-12 md:w-56 w-44 ml-48 mt-48' src='/images/Group.png'></img>
@@ -87,8 +87,8 @@ export default function Hero() {
       <img className="w-72 mt-10 mx-auto mb-12" src="/images/hero-logo.svg" alt="hero images" />
       <h1 className="finaldate text-5xl text-center text-[#fff] whitespace-nowrap md:text-6xl mt-18 mx-auto border-[#fff] border-solid">29 SEPT - 1 OCT</h1>
       {changebar ? (
-        <Link href={'/registerpage'}>
-          <button className="block mx-auto t-0 left-0 w-52 my-16 right-0 bottom-52 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-2xl px-4 p-4 rounded-xl">Register now!</button>
+        <Link href={'/clarion'}>
+          <button className="block mx-auto t-0 left-0 w-52 my-16 right-0 bottom-52 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-xl px-4 p-4 rounded-xl">View 12th edition Clarion !</button>
         </Link>
       ) : (
         <Button onClick={() => { window.location.replace("/loggedinhomepage") }} className="block my-16 mx-auto t-0 left-0 w-52 right-0 bottom-52 bg-[#B6FF1A] hover:bg-[#ABCF3A] text-2xl px-4 p-4 rounded-xl">View Profile</Button>

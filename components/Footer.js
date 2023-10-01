@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CloseReg from './CloseReg';
 import { useState } from 'react';
+import { Alert } from '@material-tailwind/react';
 
 export default function Footer() {
   const [closeReg, setCloseReg] = useState(true);
@@ -11,6 +12,7 @@ export default function Footer() {
       setCloseReg(true);
     }, 1000);
   }
+  const [Register,setRegistration]=useState(true);
   return (
     <div className="bg-[#1A1E21] w-full">
       <div className="hidden flex-col mt-[8.75rem] text-white sm:flex  max-w-[90%] 2xl:max-w-[80%] mx-auto ">
@@ -78,9 +80,22 @@ export default function Footer() {
                 Participation
               </div>
               <div>
-                 <button  className="bg-[#189BA5] hover:shadow-xl text-[1.125rem] font-custom font-medium mt-[1.25rem] text-black rounded-lg px-10 py-3">
-                 <Link href={'/registerpage'}>    Register</Link> 
-                </button>
+
+              { Register?<button onClick={()=>{setRegistration(false)
+        setTimeout(() => {
+          setRegistration(true)
+        }, 2000);
+      }}
+            className={'bg-[#189BA5] hover:shadow-xl text-[1.125rem] font-custom font-medium mt-[1.25rem] text-black rounded-lg px-10 py-3'
+              }
+          >
+            Register
+          </button >: <Alert className=' flex bg-red-500' >Registrations for current edition is now over!</Alert>}
+
+
+
+
+                
                 <button  className="bg-[#189BA5] hover:shadow-xl text-[1.125rem] mx-6 font-custom font-medium mt-[1.25rem] text-black rounded-lg px-10 py-3">
                  <Link href={'/loginpage'}>    Login</Link> 
                 </button>
@@ -219,10 +234,19 @@ export default function Footer() {
               <button  className="bg-[#189BA5] hover:shadow-xl text-[1.125rem] mx-6 font-custom font-medium mt-[1.25rem] text-black rounded-lg px-10 py-3">
                  <Link href={'/loginpage'}>    Login</Link> 
                 </button>
-                <button  className="bg-[#189BA5] text-[1.125rem] font-custom font-medium mt-[1.25rem] text-black rounded-lg px-10 py-3">
-                 <Link href={'/registerpage'}> Register</Link>
-                </button>
-                
+
+                { Register?<button onClick={()=>{setRegistration(false)
+        setTimeout(() => {
+          setRegistration(true)
+        }, 2000);
+      }}
+            className={'bg-[#189BA5] text-[1.125rem] font-custom font-medium mt-[1.25rem] text-black rounded-lg px-10 py-3'
+              }
+          >
+            Register
+          </button >: <Alert className=' flex bg-red-500' >Registrations for current edition is now over!</Alert>}
+
+             
               
             </div>
             <div className="mt-[44px]">
