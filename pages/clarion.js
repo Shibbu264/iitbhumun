@@ -36,7 +36,7 @@ export default function ClarionPage  () {
                 DAY-0
                 </AccordionHeader>
                 <AccordionBody className="text-[1rem] font-custom border-t-[1px] border-black/50">
-                    <a href='https://drive.google.com/file/d/1RKSnt4_PuzxvQcDDF2WEnDDaf2xD3JDX/view?usp=drive_link' target='_blank'>View!</a>
+                    <a href='https://drive.google.com/file/d/1RKSnt4_PuzxvQcDDF2WEnDDaf2xD3JDX/view?usp=drive_link' target='_blank' rel="noreferrer">View!</a>
                 </AccordionBody>
             </Accordion>
         </Fragment>
@@ -46,7 +46,7 @@ export default function ClarionPage  () {
                 DAY-1
                 </AccordionHeader>
                 <AccordionBody className="text-[1rem] font-custom border-t-[1px] border-black/50">
-                    <a href='https://drive.google.com/file/d/1AdZFtGcMsbpZMotNw4DrEZ1C6Sq3N3zr/view?usp=drive_link' target='_blank'>View!</a>
+                    <a href='https://drive.google.com/file/d/1AdZFtGcMsbpZMotNw4DrEZ1C6Sq3N3zr/view?usp=drive_link' target='_blank' rel="noreferrer">View!</a>
                 </AccordionBody>
             </Accordion>
         </Fragment>
@@ -56,7 +56,7 @@ export default function ClarionPage  () {
                 DAY-2
                 </AccordionHeader>
                 <AccordionBody className="text-[1rem] font-custom border-t-[1px] border-black/50">
-                    <a></a>
+                    <a href='' target='_blank' rel="noreferrer">View!</a>
                 </AccordionBody>
             </Accordion>
         </Fragment>
