@@ -7,12 +7,12 @@ import Link from 'next/link';
 export default function Main() {
   return (
     <div className="w-[90%] mx-auto pt-16 bg-[#FFFFFF]  flex flex-col space-y-12">
-      <div className="flex justify-center gap-5">
+      {/* <div className="flex justify-center gap-5">
         <p className="font-extrabold font-heading text-center  text-[#1A1E21] text-2xl mt-14 sm:text-[2.5rem]">
           Conference begins in 
         </p><img src='/images/clock.gif' className='flex w-40 mt-0'/>
         </div>
-        <CountdownElement />
+        <CountdownElement /> */}
      
       <div className="mt-12 sm:mt-[8.75rem]">
         <p className="font-bold font-heading text-center text-[#1A1E21] text-xl sm:text-[2.5rem]">

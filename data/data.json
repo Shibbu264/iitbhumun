@@ -43,41 +43,41 @@
   "collaborators": [
     {
       "id": 1,
-      "src": "/images/fairgaze-logo.png",
+      "src": "/images/sponsor1.jpeg",
       "height": 400
     }
   ],
   "sponsors": [
     {
       "id": 1,
-      "src": "/images/unstop-logo.svg",
+      "src": "/images/sponsor2.jpeg",
       "height": 600,
       "href": "https://unstop.com/conference/bhu-mun-2023-indian-institute-of-technology-iit-bhu-varanasi-577681"
     },
     {
       "id": 2,
-      "src": "/images/sponsor-4.png",
+      "src": "/images/sponsor3.jpeg",
       "height": 600,
       "href": "https://www.meraevents.com/event/iitbhu-mun-2023-for-online-international-delegates"
     },
     {
       "id": 3,
-      "src": "/images/sponsor_4.png",
+      "src": "/images/sponsor4.jpeg",
       "height": 600
     },
     {
       "id": 4,
-      "src": "/images/sponsor_5.png",
+      "src": "/images/sponsor5.jpeg",
       "height": 600
     },
     {
       "id": 5,
-      "src": "/images/sponsor_6.png",
+      "src": "/images/sponsor6.jpeg",
       "height": 600
     },
     {
       "id": 6,
-      "src": "/images/sponsor_7.png",
+      "src": "/images/sponsor7.jpeg",
       "height": 600
     },
     {
