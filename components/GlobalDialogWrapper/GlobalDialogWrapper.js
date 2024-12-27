@@ -31,11 +31,15 @@ export default function GlobalDialog({ children }) {
       <Dialog.Root onPointerDownOutside={(e) => e.preventDefault()} open={isDialogOpen} onOpenChange={(isOpen) => !isOpen && handleClose()}>
         <Dialog.Portal>
           <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-50" />
-          <Dialog.Content className="fixed flex-col items-center left-1/2 top-1/2 md:max-h-[500px] md:mb-0 h-screen w-screen z-[60]  md:max-w-[720px] overflow-y-auto  -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white md:p-6 p-4 shadow-lg">
+          <Dialog.Content className="fixed flex-col items-center left-1/2 top-1/2 md:max-h-[500px] md:mb-0 h-screen w-screen z-[60]  md:max-w-[720px] overflow-y-auto  -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white md:p-6 p-4 shadow-lg " style={{backgroundColor: 'transparent',
+                                                                                                                                                                                                                                                              marginTop:'20px',   
+          }}>
             <Dialog.Close onClick={handleClose} className='sticky top-0 left-full -ml-12 z-50' asChild>
               <CancelOutlined sx={{
                 width: "24px",
-                height: "24px"
+                height: "24px",
+                
+                color: 'white',
               }} />
             </Dialog.Close>
             <Dialog.Description className="text-sm relative text-gray-500">
