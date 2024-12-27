@@ -176,146 +176,108 @@
   "secretariat": [
     {
       "id": 1,
-      "name": "Moulik Ketkar",
+      "name": "Ron Rexy",
       "position": "Secretary-General ",
       "description": "Random description",
-      "img": "/images/Moulik.png"
+      "img": "/images/Ron.jpg"
     },
     {
       "id": 2,
-      "name": "Aryan Poddar",
+      "name": "Shivansh Gupta",
       "position": "Director-General",
       "description": "Random description",
-      "img": "/images/aryan.png"
-    },
-    {
-      "id": 3,
-      "name": "Ayush Kandoi",
-      "position": "Deputy Secretary-General",
-      "description": "Random description",
-      "img": "/images/Ayush.png"
-    },
-    {
-      "id": 4,
-      "name": "Aryavardhan Pateriya",
-      "position": "Deputy Director-General",
-      "description": "Random description",
-      "img": "/images/Aryavardhan.png"
-    },
-    {
-      "id": 5,
-      "name": "Preeti Kumari",
-      "position": "Head of Operations",
-      "description": "Random description",
-      "img": "/images/Preeti_Kumari.png"
-    },
-    {
-      "id": 6,
-      "name": "Deepa Choudhary",
-      "position": "Head of Creative Affairs",
-      "description": "Random description",
-      "img": "/images/Deepa_Choudhary.png"
+      "img": "/images/Shivansh.jpg"
     }
   ],
   "heads": [
     {
       "id": 1,
-      "name": "Mohamed Rafee",
-      "position": "Director d'Design"
+      "name": "Arushi Gupta",
+      "position": "Head of Operations",
+      "img": "/images/Arushi.jpg"
     },
     {
       "id": 2,
-      "name": "Naman Agrawal",
-      "position": "Technical Director",
-      "img": "/images/naman.png"
+      "name": "Hemanth V.",
+      "position": "Head of Creative Affairs",
+      "img": "/images/Hemanth.jpg"
     },
     {
       "id": 3,
-      "name": "Aditya Anil Kapdi",
-      "position": "IP Head",
-      "img": "/images/Aditya.png"
+      "name": "Virat Patel",
+      "position": "Head of Public Outreach",
+      "img": "/images/Virat.jpg"
     },
     {
       "id": 4,
-      "name": "Pranav S",
-      "position": "Marketing Director",
-      "img": "/images/Pranav.png"
+      "name": "Rachit Prakash",
+      "position": "Head of Public Relations",
+      "img": "/images/Rachit.jpg"
     },
     {
       "id": 5,
-      "name": "Satveer Barodia",
-      "position": "Publicity Director",
-      "img": "/images/satveer.png"
-    }
+      "name": "Rishabh",
+      "position": "Head of Technical Operations",
+      "img": "/images/Rishabh.jpg"
+    } 
   ],
   "vertical": [
     {
       "id": 1,
-      "vertical": "Delegate Affairs",
-      "member1": "Swastik Mishra",
-      "member2": "Shubhdarshini Dwivedi",
-      "member3": "Aastha Ojha",
-      "member4": "Shlok Dhanawde"
+      "vertical": "Committee Affairs",
+      "member1": "Oppilan Iniyan",
+      "member2": "Yashaswa Ram",
+      "member3": "Ritvik Gupta",
+      "member4": "Bhavesh Yadav",
+      "member5": "Garima Sharma",
+      "member6": "Eashoo Ranjan",
+      "member7": "Bhargavi"
     },
     {
-      "id": 1,
-      "vertical": "Design",
-      "member1": "Amit Meena",
-      "member2": "Manas Gupta",
-      "member3": "Siddharth prakash"
+      "id": 2,
+      "vertical": "Design and Content",
+      "member1": "Ishanika Radder",
+      "member2": "Simran Nareda",
+      "member3": "Swetha Yalamanchi",
+      "member4": "Noor Dhaliwal"
     },
     {
-      "id": 1,
-      "vertical": "Content",
-      "member1": "Swaralee Nagwanshi",
-      "member2": "Rishav Parashar"
-    },
-    {
-      "id": 1,
+      "id": 3,
       "vertical": "Public Relations",
-      "member1": "Anish Kumar Gupta",
-      "member2": "Anushka Sharma ",
-      "member3": "Chetan Chavan",
-      "member4": "Atul Birla "
+      "member1": "Priyanka Hichkad",
+      "member2": "Gourav Pandey",
+      "member3": "Sristi Swarupa"
     },
     {
-      "id": 1,
+      "id": 4,
       "vertical": "Marketing",
-      "member1": "Shreeyam Saklecha",
-      "member2": "JISHNU.P.N ",
-      "member3": "Abhinav Patel",
-      "member4": "Kashish Agrawal"
+      "member1": "Ashmit Singh",
+      "member2": "Kamal Banna",
+      "member3": "Harris Imam",
+      "member4": "Abhishek Anand",
+      "member5": "Chahat Chauhan",
+      "member6": "Abhishek Anand",
+      "member7": "Edamalapati Mokshitha",
+      "member8": "Devashish Tripathi",
+      "member9": "Akansha Ray",
+      "member10": "Pulkit Gulati"
     },
     {
-      "id": 1,
+      "id": 5,
       "vertical": "Publicity",
-      "member1": "Arpit Sahu",
-      "member2": "Poojitha Paltasingi",
-      "member3": "Abhishek Dwivedi",
-      "member4": "Swastik",
-      "member5": "Satwik Trivedi"
+      "member1": "Anvita Srivastava",
+      "member2": "Rituraj Singh",
+      "member3": "Kanishk Gajbe",
+      "member4": "Manish Kumar",
+      "member5": "Harman Singh",
+      "member6": "Satyam Sharma",
+      "member7": "Raghav Bansal"
     },
     {
-      "id": 1,
-      "vertical": "Hospitality & Logistics",
-      "member1": "Vishnu Gopakumar",
-      "member2": "Architha Mekala",
-      "member3": "Adrija Banerjee"
-    },
-    {
-      "id": 1,
+      "id": 6,
       "vertical": "Tech",
-      "member1": "Vaibhav Kumar Pandey",
-      "member2": "Devansh Choudhary",
-      "member3": "Utkarsh Sharma"
-    },
-    {
-      "id": 1,
-      "vertical": "Executive Board Affairs",
-      "member1": "Kundurthy Yamini Jaya Meghana ",
-      "member2": "Shiv Prabhakar",
-      "member3": "Anushka Singh Jaiswal",
-      "member4": "Vivek Kumar Bharathi B R"
+      "member1": "Tridip Barman",
+      "member2": "Bhavesh Yadav"
     }
   ],
   "pastExperiences": [
@@ -415,22 +377,22 @@
   "committees": [
     {
       "id": 1,
-      "title": "ECOSOC",
-      "data": "The Economic and Social Council (ECOSOC) is one of the six principal organs of the United Nations dedicated to advance the three dimensions of sustainable development – economic, social and environmental by providing overall guidance and coordination to academic and political institutions for achieving higher standards of living, full employment, better healthcare and welfare systems, among many more",
-      "chair": "Aryan Singh",
-      "vicechair": "Nishant Padhy",
+      "title": "JPC",
+      "data": "The Joint Parliamentary Committee (JPC) is a specialized investigative body in the Indian Parliament, mandated to examine significant issues like policy matters, financial misconduct, and legislative concerns, ensuring transparency and accountability in governance.",
+      "chair": "Soham Ahuja",
+      "vicechair": "Anwesha Bairagi",
       "agenda": "Deliberation on economic inclusion of refugees, with a focus on internally displaced people",
-      "logosrc": "/images/ecosoc.svg",
-      "chairsrc": "/images/ecosoc-c.jpg",
-      "vicechairsrc": "/images/ecosoc-vc.jpg",
+      "logosrc": "/images/jpc.svg",
+      "chairsrc": "/images/jpc-c.jpg",
+      "vicechairsrc": "/images/jpc-vc.jpg",
       "href": "https://drive.google.com/file/d/1XgVz5HymuetvGC2nzs5qh94LHHYo4Hpx/view?usp=sharing"
     },
     {
       "id": 2,
       "title": "UNODC",
       "data": "The United Nations Office on Drugs and Crime (UNODC) is a global leader in the fight against illicit drugs and international crime. UNODC is mandated to assist Member States in their struggles against interrelated issues of illicit trafficking and abuse of drugs, crime prevention and criminal justice, international terrorism, and political corruption. ",
-      "chair": "Aditya Nayak",
-      "vicechair": "Jackelyn Carreon",
+      "chair": "Eswar Chava",
+      "vicechair": "",
       "agenda": "Revisiting the issue of cross border illicit drugs, arms and human trafficking",
       "logosrc": "/images/unodc.svg",
       "chairsrc": "/images/unodc-c.jpg",
@@ -442,7 +404,7 @@
       "title": "AIPPM",
       "data": "All India Political Party Meet is a non-technical but powerful committee without any legislative provisions. It is a meeting between all the political parties of the nation. AIPPM is regarded as ground zero for discussing the critical issues that concern the delegates’ minds and is where realistic solutions begin.The purpose of the meetings is to be a forum for unbounded political debate which may not be allowed in the Parliament due to time constraints and provide a better insight into national issues. They help provide a diverse viewpoint before the actual legislative process.",
       "chair": "Aman Yadav",
-      "vicechair": "Naman Jain",
+      "vicechair": "Sashreek Pandey",
       "agenda": "Discussion on ways to mitigate corruption in India with special emphasis on administrative bodies",
       "logosrc": "/images/aippm.svg",
       "chairsrc": "/images/aippm-c.jpg",
@@ -451,21 +413,21 @@
     },
     {
       "id": 4,
-      "title": "CCC",
-      "data": "A crisis committee is a decision making body that has more power than a traditional committee. In the Continuous Crisis Committees, there is no set agenda. The Committee is expected to respond to the multitude of issues raised throughout the conference as corollaries of its actions and other simulated events.",
-      "chair": "Rahul Singh Kajla",
-      "vicechair": "Abhinav Mukherjee",
+      "title": "BCCI",
+      "data": "The Board of Control for Cricket in India (BCCI) is the governing body for cricket in India, responsible for overseeing the sport's development, organization, and management. Tasked with promoting cricket at all levels, the BCCI manages domestic tournaments, international matches, and the Indian Premier League, ensuring the growth and success of the game nationwide.",
+      "chair": "Rishab Doshi",
+      "vicechair": "",
       "agenda": " AUPSC : Rise of Insurgent groups as a detriment to peace and security in the continent of Africa.",
-      "logosrc": "/images/cc.svg",
-      "chairsrc": "/images/cc-c.jpg",
-      "vicechairsrc": "/images/cc-vc.jpg"
+      "logosrc": "/images/bcci.svg",
+      "chairsrc": "/images/bcci-c.jpg",
+      "vicechairsrc": "/images/bcci-vc.jpg"
     },
     {
       "id": 5,
       "title": "DISEC",
       "data": "Disarmament and International Security, also known as DISEC,is the committee that deals with disarmament, global challenges and threats to peace that affect the international community and seeks out solutions to the challenges in the international security regime .It considers all disarmament and international security matters within the scope of the Charter or relating to the powers and functions of any other organ of the United Nations; ",
-      "chair": "Arkoprabho Hazra",
-      "vicechair": "Archit Malhotra",
+      "chair": "Abhinav Mukherjee",
+      "vicechair": "Parth Mahajan",
       "agenda": "The situation in the temporarily occupied territories of Ukraine",
       "logosrc": "/images/disec.svg",
       "chairsrc": "/images/disec-c.jpg",
@@ -476,8 +438,8 @@
       "id": 6,
       "title": "UNCSW",
       "data": "The United Nations Commission on the Status of Women (UNCSW) is the global intergovernmental body dedicated to the promotion of gender equality and the empowerment of women. The CSW is instrumental in promoting women’s rights, documenting the reality of women’s lives throughout the world, and shaping global standards on gender equality.",
-      "chair": "Rohan Rao",
-      "vicechair": "Manisha Sengupta",
+      "chair": "Jai Melwani",
+      "vicechair": "Shaik Salamullah",
       "agenda": "Women as the drivers of Economic Recovery and resilience with special emphasis on SDG 5 and 8",
       "logosrc": "/images/uncsw.svg",
       "chairsrc": "/images/uncsw-c.jpg",
@@ -486,26 +448,26 @@
     },
     {
       "id": 7,
-      "title": "WTO",
-      "data": "The World Trade Organization (WTO) is the only global international organization dealing with the rules of trade between nations. At its heart are the WTO agreements, negotiated and signed by the bulk of the world’s trading nations and ratified in their parliaments. The goal is to ensure that trade flows as smoothly, predictably and freely as possible.",
-      "chair": "Shivam Jain Kakadia",
-      "vicechair": "Hidaya Tlemçani",
+      "title": "UNHRC",
+      "data": "The United Nations Human Rights Council (UNHRC) is a key international body dedicated to promoting and protecting human rights globally. It is mandated to address violations, support Member States in upholding human rights standards, and foster dialogue and cooperation on related issues.",
+      "chair": "Domil Antony Johnson",
+      "vicechair": "Pratham Golcha",
       "agenda": "Barriers Aplenty - An emphasis on tariff competitions and the disruption in supply chains",
-      "logosrc": "/images/wto.svg",
-      "chairsrc": "/images/wto-c.jpg",
-      "vicechairsrc": "/images/wto-vc.jpg",
+      "logosrc": "/images/unhrc.svg",
+      "chairsrc": "/images/unhrc-c.jpg",
+      "vicechairsrc": "/images/unhrc-vc.jpg",
       "href": "https://drive.google.com/file/d/1--HOVJr5RZL80oXTxgzERVoe-Zulxr3z/view?usp=sharing"
     },
     {
       "id": 8,
-      "title": "Lok Sabha",
-      "data": "The Lok Sabha (House of the People) is the Lower house of India's bicameral Parliament( the supreme legislative body of the Republic of India.) Lok Sabha is composed of representatives of the people chosen by direct election on the basis of the adult suffrage by first past the post system. The government has to prove its majority in the lok sabha to form government.The primary function of Parliament is to make law on behalf of people of India. It can pass bills concerning all those subjects which have been included in the Union and Concurrent list.",
-      "chair": "Mayank Singhal",
-      "vicechair": "Vignesh Ramanathan",
+      "title": "GA-LEGAL",
+      "data": "GA-Legal is a trusted leader in providing comprehensive legal solutions, dedicated to assisting clients with matters ranging from corporate law and compliance to dispute resolution and intellectual property. Committed to excellence and integrity, GA-Legal ensures tailored legal support to meet diverse client needs.",
+      "chair": "Aditya Sharma",
+      "vicechair": "Sayanabha Chandra",
       "agenda": "Discussing the state of rights and privileges of marginalized communities in India",
-      "logosrc": "/images/ls.svg",
-      "chairsrc": "/images/ls-c.jpg",
-      "vicechairsrc": "/images/ls-vc.jpg",
+      "logosrc": "/images/ga.svg",
+      "chairsrc": "/images/ga-c.jpg",
+      "vicechairsrc": "/images/ga-vc.jpg",
       "href": "https://drive.google.com/file/d/1K_jrKa8SINRmtXpBIlkhZsut7PajWDyI/view?usp=sharing"
     }
   ],
@@ -530,15 +492,14 @@
   ],
   "registerCommittees": [
     "None",
+    "JPC",
+    "UNODC",
     "AIPPM",
-    "Lok Sabha",
-    "CCC",
-    "UNCSW",
-    "ECOSOC",
+    "BCCI",
     "DISEC",
-    "WTO(Online)",
-    "UNODC(Online)",
-    "International Press(Hybrid)"
+    "UNCSW",
+    "UNHRC",
+    "GA-LEGAL"
   ],
   "aippm": [
     "Select an option",
@@ -645,7 +606,7 @@
     "Vikram Aditya Singh",
     "Yogi Adityanath"
   ],
-  "ls": [
+  "jpc": [
     "Select an option",
     "Abdullah, Dr. Farooq",
     "Adv. A. M. Ariff",
@@ -847,7 +808,7 @@
     "Yadav, Shri Shyam Singh",
     "Yepthomi, Shri Tokheho"
   ],
-  "ccc": [
+  "bcci": [
     "Select an option",
     "Russian Federation",
     "United States of America",
@@ -970,7 +931,7 @@
     "Republic Of Turkey",
     "United States Of America"
   ],
-  "ecosoc": [
+  "ga_legal": [
     "Select an option",
     "Islamic Republic Of Afghanistan",
     "Argentine Republic",
@@ -1221,7 +1182,7 @@
     "Republic of Zambia",
     "Republic of Zimbabwe"
   ],
-  "wto": [
+  "unhrc": [
     "Select an option",
     "Islamic Republic Of Afghanistan",
     "Republic Of Angola",

@@ -14,15 +14,14 @@ import { setUser } from '../../../lib/slices/userSlice';
 // Constant for committee mapping
 const COMMITTEE_OPTIONS = {
   'None': [],
+  'JPC': data.jpc,
+  'UNODC': data.unodc,
   'AIPPM': data.aippm,
-  'Lok Sabha': data.ls,
-  'CCC': data.ccc,
-  'UNCSW': data.uncsw,
-  'ECOSOC': data.ecosoc,
+  'BCCI': data.BCCI,
   'DISEC': data.disec,
-  'WTO(Online)': data.wto,
-  'UNODC(Online)': data.unodc,
-  'International Press(Hybrid)': data.ip
+  'UNCSW': data.uncsw,
+  'UNHRC': data.unhrc,
+  'GA-LEGAL': data.ga_legal,
 };
 
 // Initial form input structure
@@ -210,7 +209,7 @@ const Register = () => {
         <title>MUN Registration Form</title>
       </Head>
       
-      <div className={"flex justify-center flex-col items-center w-full mx-auto pb-4"}>
+      <div className={"flex justify-center p-6 flex-col items-center w-full md:w-[720px] mx-auto pb-4"}>
         {/* Progress Indicator */}
         <div className="place-items-center flex justify-center font-semibold text-center pb-8">
           <div 
@@ -234,7 +233,7 @@ const Register = () => {
         </div>
 
         {/* Form Stages */}
-        <form className='w-full' onSubmit={handleNextStage}>
+        <form className='w-full px-6' onSubmit={handleNextStage}>
           {isPersonalInfoStage ? (
             <PersonalInfoStage 
               formInput={formInput}

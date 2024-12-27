@@ -1,29 +1,22 @@
 import React, { useState } from "react";
 import { useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { closeDialog } from "../../../lib/slices/GlobalDialogWrapperSlice";
 
 export default function Logout() {
   const { data: session } = useSession();
   const router = useRouter();
-
-  const [hover, setHover] = useState({ logout: false, cancel: false });
+  const dispatch=useDispatch()
 
   if (session) {
     return (
-      <div className="flex justify-center items-center max-w-[735px]:min-h-screen">
-        <div
-          className="w-[305px] h-[305px] bg-cover bg-center scale-[0.85] sm:scale-100"
-          style={{ backgroundImage: "url('/images/Logout4.svg')" }}
-        >
+      <div className="flex p-6 flex-col w-full bg-gradient-to-t from-blue-900 via-purple-700 to-pink-900  justify-center items-center h-full">
           <div className="flex flex-col items-center">
-            <h2 className="text-[#E84C6D] font-semibold mt-20 text-[24px]">
-              Confirm session
+            <h2 className="text-[#E84C6D] font-bold mt-20 text-[24px]">
+              Confirm session termination ?
             </h2>
-            <h3 className="text-[#E84C6D] font-semibold mt-3 text-[24px]">
-              termination ?
-            </h3>
-
-            <p className="text-white font-semibold mt-10 text-[18px]">
+            <p className="text-white font-semibold mt-6 text-[18px]">
               You&#39;ll need to sign in again to
             </p>
             <p className="text-white font-semibold mt-1 text-[18px]">
@@ -31,31 +24,26 @@ export default function Logout() {
             </p>
           </div>
 
-          <div className="flex justify-evenly mt-10">
+          <div className="flex gap-4 justify-between mt-6">
             <button
-              className="h-10 w-32 border-2 border-[white] rounded-2xl text-lg font-semibold bg-transparent text-white transition-transform hover:scale-110"
-              onMouseEnter={() => setHover({ ...hover, logout: true })}
-              onMouseLeave={() => setHover({ ...hover, logout: false })}
+              className="h-10 w-32 border-2 border-[white] rounded-2xl text-lg font-semibold bg-transparent text-white transition-transform hover:scale-105"
               onClick={() => {
-                signOut({ redirect: "/" });
+                signOut({ redirect: "/" }).then(()=>router.push('/'));
               }}
             >
               Logout
             </button>
 
             <button
-              className="h-10 w-32 border-2 border-[white] rounded-2xl text-lg font-semibold bg-transparent text-white transition-transform hover:scale-110"
-              onMouseEnter={() => setHover({ ...hover, cancel: true })}
-              onMouseLeave={() => setHover({ ...hover, cancel: false })}
+              className="h-10 w-32 border-2 border-[white] rounded-2xl text-lg font-semibold bg-transparent text-white transition-transform hover:scale-105"
               onClick={() => {
-                router.back(); // Navigates to the previous page
+                dispatch(closeDialog())
               }}
             >
               Cancel
             </button>
           </div>
         </div>
-      </div>
     );
   }
 }
