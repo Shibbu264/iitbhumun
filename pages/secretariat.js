@@ -69,6 +69,11 @@ export default function Secretariat() {
                                 member3={i.member3}
                                 member4={i.member4}
                                 member5={i.member5}
+                                member6={i.member6}
+                                member7={i.member7}
+                                member8={i.member8}
+                                member9={i.member9}
+                                member10={i.member10}
                             />
                         )
 

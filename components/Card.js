@@ -28,7 +28,7 @@ export default function Card(props) {
             <div className="max-w-sm rounded shadow-lg wrap" id="card">
                 <Image
                     width={336}
-                    height={251.67}
+                    height={251.6}
                     src={element.src}
                     alt="Sunset in the mountains"
                 />

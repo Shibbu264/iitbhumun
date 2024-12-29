@@ -11,6 +11,11 @@ export default function TeamCard(props) {
                 <p className='p-1 text-lg text-center'>{props.member3}</p>
                 <p className='p-1 text-lg text-center'>{props.member4}</p>
                 <p className='p-1 text-lg text-center'>{props.member5}</p>
+                <p className='p-1 text-lg text-center'>{props.member6}</p>
+                <p className='p-1 text-lg text-center'>{props.member7}</p>
+                <p className='p-1 text-lg text-center'>{props.member8}</p>
+                <p className='p-1 text-lg text-center'>{props.member9}</p>
+                <p className='p-1 text-lg text-center'>{props.member10}</p>
              
             </div>
         </div>
