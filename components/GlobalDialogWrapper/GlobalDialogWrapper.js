@@ -31,7 +31,7 @@ export default function GlobalDialog({ children }) {
       <Dialog.Root onPointerDownOutside={(e) => e.preventDefault()} open={isDialogOpen} onOpenChange={(isOpen) => !isOpen && handleClose()}>
         <Dialog.Portal>
           <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-50" />
-          <Dialog.Content className="fixed flex-col items-center left-1/2 top-1/2 md:max-h-[500px] md:mb-0 md:w-fit md:h-fit h-screen w-screen z-[60]  md:max-w-[720px] overflow-y-auto  -translate-x-1/2 -translate-y-1/2 rounded-xl bg-white md:p-0 p-4 shadow-lg"  
+          <Dialog.Content className="fixed flex-col items-center left-1/2 top-1/2 md:max-h-[500px] md:mb-0 md:w-fit md:h-fit h-screen w-screen z-[60]  md:max-w-[720px] overflow-y-auto  -translate-x-1/2 -translate-y-1/2 rounded-xl bg-white md:p-0 p-4 shadow-lg" style={{backgroundColor:"transparent"}}  
           >
             <Dialog.Close onClick={handleClose} className='ml-auto absolute top-4 !right-4 z-50' asChild>
               <CancelOutlined sx={{
