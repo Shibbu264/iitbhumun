@@ -179,14 +179,14 @@
       "name": "Ron Rexy",
       "position": "Secretary-General ",
       "description": "Random description",
-      "img": "/images/Ron.jpg"
+      "img": "/images/Ron.svg"
     },
     {
       "id": 2,
       "name": "Shivansh Gupta",
       "position": "Director-General",
       "description": "Random description",
-      "img": "/images/Shivansh.jpg"
+      "img": "/images/Shivansh.svg"
     }
   ],
   "heads": [
@@ -194,25 +194,25 @@
       "id": 1,
       "name": "Arushi Gupta",
       "position": "Head of Operations",
-      "img": "/images/Arushi.jpg"
+      "img": "/images/Arushi.svg"
     },
     {
       "id": 2,
       "name": "Hemanth V.",
       "position": "Head of Creative Affairs",
-      "img": "/images/Hemanth.jpg"
+      "img": "/images/Hemanth.svg"
     },
     {
       "id": 3,
       "name": "Virat Patel",
       "position": "Head of Public Outreach",
-      "img": "/images/Virat.jpg"
+      "img": "/images/Virat.svg"
     },
     {
       "id": 4,
       "name": "Rachit Prakash",
       "position": "Head of Public Relations",
-      "img": "/images/Rachit.jpg"
+      "img": "/images/Rachit.svg"
     },
     {
       "id": 5,
