@@ -79,22 +79,23 @@ export default function Main() {
         </p>
         <div className="flex justify-center mt-8 sm:mt-[3.75rem]">
           <p className="px-8 w-[58.75rem] sm:w-[73.375rem] text-[#03001E] sm:text-lg font-light font-custom text-justify">
-            <p>Dear Delegates, respected Faculty Advisors, and the Secretariat, </p>
-            <p className='mt-2'>I am pleased to announce the commencement of the twelfth edition of the IITBHU Model United Nations. Having established a remarkable legacy over the span of its 11-year history, IITBHU Model United Nations holds the distinction of being one of the earliest and most esteemed conferences in India.
+            <p>Dear Delegates, Faculty Advisors, and Members of the Secretariat, </p>
+            <p className='mt-2'>It is with immense pride and anticipation that I welcome you to the 13th edition of IITBHU Model United Nations. Representing one of India&#39;s premier institutions, IITBHU MUN has long been a stage where intellect meets diplomacy, and ideas transform into action.
+            </p>
+            <p className='mt-2'>Over the past twelve years, this conference has not only become one of the largest MUNs in India but also a hallmark of excellence, attracting delegates of unparalleled caliber and distinguished leaders from across the globe. From policymakers like Dr. Ajay Kumar, former Defence Secretary of India, to other eminent personalities, our legacy is built on the insights of those who shape the world and the ambitions of those who will inherit it.
 </p>
-            <p className='mt-2'>The thrill and excitement of participating in Model United Nations like those years ago indeed faded during the COVID years, and the transition from online platforms to offline dais is quite challenging. With the upcoming conference, let us together repaint and restore, once again, the lost picture in this holy city of Benares. </p>
-            <p>The transition from an online platform during the Covid era to an offline dias has proven to be highly successful, as the conference has achieved significant milestones, marking a new chapter in its esteemed history. Dr Ajay Kumar, former Defence Secretary of India, graced the conference in Varanasi, restoring its prominence in the sacred city.
+            <p>This year, we continue that legacy with a renewed vision. IITBHU MUN is not merely a conference—it is a confluence of bright minds, a platform for bold ideas, and a crucible for innovative solutions to global challenges. It is where debate transcends rhetoric and becomes a force for change, where every resolution carries the weight of potential impact.
 </p>
-            <p className='mt-2'>Guiding such a prestigious conference is an immense responsibility, yet with the invaluable wisdom passed down by previous Secretary Generals and the exceptional dedication of our dynamic and diligent Secretariat, I am filled with optimism for the enthralling experience this edition promises to deliver.
+            <p className='mt-2'>As Secretary-General, I am honored to lead this year&#39;s endeavor. With the combined strength of IITBHU&#39;s storied reputation and the relentless dedication of our extraordinary Secretariat, this edition promises to elevate our already illustrious standards.
 </p>
-<p className='mt-2'>I invite you to join us for this monumental edition, where passionate debates, world-changing aspirations, and productive discussions with innovative resolutions await.
+<p className='mt-2'>To those who join us, know that this conference is more than an opportunity to engage in diplomacy—it is a chance to challenge convention, shape discourse, and leave your mark. Here, in the heart of Banaras, a city as timeless as the ideals of unity and progress we aspire to uphold, you will take part in something truly remarkable.
 </p>
-            <p className='mt-2'>See you all at yet another marvellous IITBHU Model United Nations conference!
+            <p className='mt-2'>I look forward to seeing your passion, creativity, and resolve define the 13th edition of IITBHU MUN. The stage is yours.
 </p>
             <p className='mt-2 font-bold'>Yours sincerely,
 </p>
-            <p className='mt-2 font-bold'>Chetan Chavan</p>
-            <p className='font-bold'>Secretary-General, IITBHU MUN’23
+            <p className='mt-2 font-bold'>Ron Rexy</p>
+            <p className='font-bold'>Secretary-General, IITBHU MUN&#39;25
 </p>
           </p>
         </div>
