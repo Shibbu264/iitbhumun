@@ -12,7 +12,7 @@ export default function Footer() {
     }, 1000);
   }
   return (
-    <div className="bg-[#1A1E21] w-full">
+    <div className="bg-[#0E114E] w-full">
       <div className="hidden flex-col mt-[8.75rem] text-white sm:flex  max-w-[90%] 2xl:max-w-[80%] mx-auto ">
         <div className="flex flex-row justify-between mt-[3.75rem]">
           <div className="max-w-1/4">
@@ -78,10 +78,10 @@ export default function Footer() {
                 Participation
               </div>
               <div>
-                 <button  className="bg-[#189BA5] hover:shadow-xl text-[1.125rem] font-custom font-medium mt-[1.25rem] text-black rounded-lg px-10 py-3">
+                 <button  className="bg-[#E84C6D] hover:shadow-xl text-[1.125rem] font-custom font-medium mt-[1.25rem] text-white rounded-lg px-10 py-3">
                  <Link href={'/registerpage'}>    Register</Link> 
                 </button>
-                <button  className="bg-[#189BA5] hover:shadow-xl text-[1.125rem] mx-6 font-custom font-medium mt-[1.25rem] text-black rounded-lg px-10 py-3">
+                <button  className="bg-[#E84C6D] hover:shadow-xl text-[1.125rem] mx-6 font-custom font-medium mt-[1.25rem] text-white rounded-lg px-10 py-3">
                  <Link href={'/loginpage'}>    Login</Link> 
                 </button>
 
@@ -146,11 +146,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center my-[0.875rem] font-custom font-normal text-[1rem]">
-          © 2023 All Rights Reserved
+          © 2025 All Rights Reserved
         </div>
       </div>
 
-      <div className="bg-[#1A1E21] mt-12 text-white px-4 sm:hidden flex flex-col items-center font-custom">
+      <div className="bg-[#0E114E] mt-12 text-white px-4 sm:hidden flex flex-col items-center font-custom">
         <div className="w-full flex items-start justify-between mt-8">
           <div className="ml-2 flex flex-col">
             <div>
@@ -204,10 +204,10 @@ export default function Footer() {
           <div className="ml-4">
             <div className="flex flex-col">
               <p className="font-bold">Participation</p>
-              <button  className="bg-[#189BA5] hover:shadow-xl text-[1.125rem] mx-6 font-custom font-medium mt-[1.25rem] text-black rounded-lg px-10 py-3">
+              <button  className="bg-[#E84C6D] hover:shadow-xl text-[1.125rem] mx-6 font-custom font-medium mt-[1.25rem] text-white rounded-lg px-10 py-3">
                  <Link href={'/loginpage'}>    Login</Link> 
                 </button>
-                <button  className="bg-[#189BA5] text-[1.125rem] font-custom font-medium mt-[1.25rem] text-black rounded-lg px-10 py-3">
+                <button  className="bg-[#E84C6D] text-[1.125rem] font-custom font-medium mt-[1.25rem] text-white rounded-lg px-10 py-3">
                  <Link href={'/registerpage'}> Register</Link>
                 </button>
                 
@@ -270,7 +270,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-4 mb-2 text-[10px]">© 2023 All Rights Reserved</div>
+        <div className="mt-4 mb-2 text-[10px]">© 2025 All Rights Reserved</div>
       </div>
     </div >
   );
