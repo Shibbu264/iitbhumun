@@ -37,21 +37,21 @@ export default function Hero() {
           width={405}
           height={249.19}
           alt="IITBHU MUN logo"
-          className="w-auto h-auto max-w-full md:w-3/4 lg:w-2/3 xl:w-1/2"
+          className="w-auto h-auto max-w-full md:w-[25%] lg:w-2/3 xl:w-1/2"
         />
       </div>
 
       <div className="space-y-1 md:space-y-2">
-        <h1 className="text-white text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-semibold">
+        <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold">
           IITBHU
         </h1>
-        <h1 className="text-white text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-semibold whitespace-nowrap -mt-1">
+        <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold whitespace-nowrap -mt-1">
           MODEL UNITED NATIONS
         </h1>
-        <h2 className="text-[#E84C6D] text-lg sm:text-2xl lg:text-3xl xl:text-3xl font-medium whitespace-nowrap">
+        <h2 className="text-[#E84C6D] text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium whitespace-nowrap">
           RISE. SPEAK. RESOLVE.
         </h2>
-        <h2 className="text-white text-lg sm:text-2xl lg:text-3xl xl:text-3xl font-medium whitespace-nowrap">
+        <h2 className="text-white text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium whitespace-nowrap">
           21-23 FEBRUARY 2025
         </h2>
       </div>
@@ -78,38 +78,57 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="grid sm:hidden">
-        <div className="row-span-full col-span-full">
+
+
+       {/* Mobile View */}
+      <div className="sm:hidden block w-full min-h-screen relative">
+        <div className="absolute inset-0">
           <Image
             src="/images/AndroidHome.svg"
             width={1079}
             height={2318}
-            layout="responsive"
+            className="object-cover w-full h-full"
             alt="hero images"
+            priority
           />
         </div>
-        <div className="row-span-full col-span-full">
-          <Image
-            src=""
-            width={1079}
-            height={2318}
-            layout="responsive"
-            alt="hero images"
-          />
+
+        <div className="relative flex flex-col items-center justify-center min-h-screen px-4">
+          <div className="w-full max-w-[250px] mb-6">
+            <Image
+              src="/images/Logo12.svg"
+              width={300}
+              height={124}
+              alt="IITBHU MUN logo"
+              className="w-full h-auto"
+            />
+          </div>
+
+          <div className="space-y-2 text-center">
+            <h1 className="text-white text-2xl font-semibold">
+              IITBHU
+            </h1>
+            <h1 className="text-white text-2xl font-semibold">
+              MODEL UNITED NATIONS
+            </h1>
+            <h2 className="text-[#E84C6D] text-lg font-medium">
+              RISE. SPEAK. RESOLVE.
+            </h2>
+            <h2 className="text-white text-lg font-medium">
+              21-23 FEBRUARY 2025
+            </h2>
+          </div>
+
+          {session?.status === "unauthenticated" && (
+            <button
+              onClick={() => dispatch(openDialog('login'))}
+              className="mt-6 px-4 py-2 bg-[#E84C6D] text-white rounded-md text-sm font-semibold hover:bg-[#d43d5d] transition-colors duration-200"
+            >
+              Register
+            </button>
+          )}
         </div>
-        <div className="row-span-full col-span-full self-center text-center ">
-          <Image
-            src="/images/Logo12.svg"
-            width={300}
-            height={123.7}
-            alt="hero images"
-          />
-        </div>
-        
-          
-        
-       
-        </div>
+      </div>
       </div>
     
   );

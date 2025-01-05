@@ -51,7 +51,7 @@ export default function NavBar({ navbar }) {
     }
     else{
     return <button onClick={handleChange}
-    className={`px-12 2xl:px-12 h-10 rounded-md hover:scale-105 text-[1.125rem] font-semibold mx-4  text-white bg-[#E84C6D]`}
+    className={`px-12 2xl:px-12  h-10 rounded-md hover:scale-105 text-[1.125rem] font-semibold mx-4  text-white bg-[#E84C6D]`}
   >
     Register
   </button>
