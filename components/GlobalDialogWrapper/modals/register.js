@@ -204,7 +204,7 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor:"white"}}>
       <Head>
         <title>MUN Registration Form</title>
       </Head>
