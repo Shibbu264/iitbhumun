@@ -24,7 +24,7 @@ const Partners = () => {
                             height={166}
                             alt="collaborators"
                         />
-                        <span className="font-custom text-[1.25rem] text-[#189BA5] font-medium mt-4 text-center">
+                        <span className="font-custom text-[1.25rem] text-[#E84C6D] font-medium mt-4 text-center">
                             UN information Centre for
                             <br />
                             India and Bhutan
@@ -32,7 +32,7 @@ const Partners = () => {
                     </div>
                     <div className="flex flex-col items-center m-[2.5rem]   ">
                         <Image
-                            src="/images/colab-3.svg"
+                            src="/images/colab-3.png"
                             width={469.4}
                             height={166}
                             alt="collaborators"
