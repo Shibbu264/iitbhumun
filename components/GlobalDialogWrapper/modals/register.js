@@ -268,6 +268,13 @@ const Register = () => {
             >
               {isPersonalInfoStage ? 'Next' : 'Submit'}
             </button>
+            <button 
+              onClick={()=>{dispatch(closeDialog())}}
+              type="button"
+              className="bg-red-500 text-white py-2 px-4 rounded"
+            >
+              Close
+            </button>
           </div>
         </form>
       </div>
