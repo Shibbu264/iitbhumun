@@ -28,16 +28,15 @@ export default function Dashboard() {
     const session = useSession()
     const COMMITTEE_OPTIONS = {
         'None': [],
+        'JPC': data.jpc,
+        'UNODC': data.unodc,
         'AIPPM': data.aippm,
-        'Lok Sabha': data.ls,
-        'CCC': data.ccc,
-        'UNCSW': data.uncsw,
-        'ECOSOC': data.ecosoc,
+        'BCCI': data.bcci,
         'DISEC': data.disec,
-        'WTO(Online)': data.wto,
-        'UNODC(Online)': data.unodc,
-        'International Press(Hybrid)': data.ip
-    };
+        'UNCSW': data.uncsw,
+        'UNHRC': data.unhrc,
+        'GA-LEGAL': data.ga_legal,
+      };
 
     useEffect(() => {
         fetchRegistration();

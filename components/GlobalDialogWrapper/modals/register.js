@@ -17,7 +17,7 @@ const COMMITTEE_OPTIONS = {
   'JPC': data.jpc,
   'UNODC': data.unodc,
   'AIPPM': data.aippm,
-  'BCCI': data.BCCI,
+  'BCCI': data.bcci,
   'DISEC': data.disec,
   'UNCSW': data.uncsw,
   'UNHRC': data.unhrc,
