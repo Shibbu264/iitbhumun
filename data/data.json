@@ -477,10 +477,7 @@
     { "source": "/images/MUN-260.jpg", "title": "kvt" },
     { "source": "/images/mun4.jpg", "title": "kvt" },
     { "source": "/images/MUN-261.jpg", "title": "kvt" },
-    { "source": "/images/mun6.jpg", "title": "kvt" },
-    { "source": "/images/MUN-192.jpg", "title": "kvt" },
-    { "source": "/images/MUN-30.jpg", "title": "kvt" },
-    { "source": "/images/MUN-250.jpg", "title": "kvt" }
+    { "source": "/images/mun6.jpg", "title": "kvt" }
   ],
   "placesCarousel": [
     { "source": "/images/kvt.webp", "title": "kvt" },
