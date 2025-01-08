@@ -39,11 +39,11 @@ export default function Dashboard() {
       };
 
     useEffect(() => {
-        if (session.status == "loading" || session.status == "unauthenticated") { }
-        else {
+        if (session.status == "authenticated") 
+        {
             fetchRegistration();
         }
-    }, [session.status]);
+    }, [session]);
 
     const fetchRegistration = async () => {
 
