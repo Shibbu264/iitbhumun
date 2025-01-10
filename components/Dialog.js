@@ -27,7 +27,7 @@ const DialogBox = (props) => {
                     <div className="font-heading font-bold  text-[1rem] sm:text-[2rem] text-center py-4">
                         EXECUTIVE BOARD
                     </div>
-                    <div className="flex justify-around py-2 w-[50%] m-auto">
+                    <div className="flex justify-around py-2  m-auto" style={{justifyContent:'space-evenly'}}>
                         <div className="font-custom flex flex-col items-center">
                             <div className="h-32 w-32 sm:h-48 sm:w-48 rounded-full border-2 border-black overflow-hidden relative">
                                 <Image src={props.csrc} layout="fill"></Image>

@@ -143,7 +143,7 @@ export default function Main() {
         <div className="flex justify-center mt-8 sm:hidden">
           <div className="mr-2 flex flex-col items-center">
             <Image
-              src="/images/legacy-circle1.svg"
+              src="/images/conference.png"
               width={100}
               height={100}
               alt="legacy"
@@ -154,7 +154,7 @@ export default function Main() {
           </div>
           <div className="mx-2 flex flex-col items-center">
             <Image
-              src="/images/legacy-circle2.svg"
+              src="/images/legacy-circle22.png"
               width={100}
               height={100}
               alt="legacy"
@@ -165,7 +165,7 @@ export default function Main() {
           </div>
           <div className="ml-2 flex flex-col items-center">
             <Image
-              src="/images/legacy-circle3.svg"
+              src="/images/legacy-circle32.png"
               width={100}
               height={100}
               alt="legacy"
