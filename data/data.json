@@ -231,7 +231,7 @@
       "member4": "Bhavesh Yadav",
       "member5": "Garima Sharma",
       "member6": "Eashoo Ranjan",
-      "member7": "Bhargavi"
+      "member7": "Bhargavi Sai Chinnari"
     },
     {
       "id": 2,
@@ -391,7 +391,7 @@
       "id": 2,
       "title": "UNODC",
       "data": "The United Nations Office on Drugs and Crime (UNODC) is a global leader in the fight against illicit drugs and international crime. UNODC is mandated to assist Member States in their struggles against interrelated issues of illicit trafficking and abuse of drugs, crime prevention and criminal justice, international terrorism, and political corruption. ",
-      "chair": "Eswar Chava",
+     "chair": "Eswar Chava",
       "vicechair": "Sayanabha chandra",
       "agenda": "Discussion on the prevention of drug trafficking in the South Asia region with special emphasis on the Golden Triangle and Golden Crescent.",
       "logosrc": "/images/unodc.svg",
@@ -403,7 +403,7 @@
       "id": 3,
       "title": "AIPPM",
       "data": "All India Political Party Meet is a non-technical but powerful committee without any legislative provisions. It is a meeting between all the political parties of the nation. AIPPM is regarded as ground zero for discussing the critical issues that concern the delegates’ minds and is where realistic solutions begin.The purpose of the meetings is to be a forum for unbounded political debate which may not be allowed in the Parliament due to time constraints and provide a better insight into national issues. They help provide a diverse viewpoint before the actual legislative process.",
-      "chair": "Aman Yadav",
+     "chair": "Aman Yadav",
       "vicechair": "Sashreek Pandey",
       "agenda": "Discussing the competitive and cooperative federalism in India",
       "logosrc": "/images/aippm.svg",
@@ -415,7 +415,7 @@
       "id": 4,
       "title": "BCCI",
       "data": "The Board of Control for Cricket in India (BCCI) is the governing body for cricket in India, responsible for overseeing the sport's development, organization, and management. Tasked with promoting cricket at all levels, the BCCI manages domestic tournaments, international matches, and the Indian Premier League, ensuring the growth and success of the game nationwide.",
-      "chair": "Rishab Doshi",
+     "chair": "Rishab Doshi",
       "vicechair": "Niti",
       "agenda": "Review the performance of the IPL and WPL as tournaments, with a specific focus on team expansion, policy enhancements, and other strategic aspects while understanding it’s impact on domestic tournaments",
       "logosrc": "/images/bcci.svg",
@@ -426,7 +426,7 @@
       "id": 5,
       "title": "DISEC",
       "data": "Disarmament and International Security, also known as DISEC,is the committee that deals with disarmament, global challenges and threats to peace that affect the international community and seeks out solutions to the challenges in the international security regime .It considers all disarmament and international security matters within the scope of the Charter or relating to the powers and functions of any other organ of the United Nations; ",
-      "chair": "Abhinav Mukherjee",
+     "chair": "Abhinav Mukherjee",
       "vicechair": "Parth Mahajan",
       "agenda": "Deliberation on the role of use of artificial intelligence in weapons systems with special emphasis on developing accountability and state responsibility.",
       "logosrc": "/images/disec.svg",
@@ -1087,7 +1087,8 @@
     "United Arab Emirates", 
     "United States", 
     "Vietnam" 
-  ],
+  ]
+  ,
   "unodc": [
     "Select an option",
       "Afghanistan",

@@ -25,7 +25,7 @@ export default function Main() {
               height={180}
               alt="collaborators"
             />
-            <span className="font-custom text-[1.25rem] text-[#189BA5] font-medium mt-4">
+            <span className="font-custom text-[1.25rem] text-[#E84C6D] font-medium mt-4">
               UNESCO (INCCU)
             </span>
           </div>
@@ -36,14 +36,14 @@ export default function Main() {
                             height={150}
                             alt="collaborators"
                         />
-                        <span className="font-custom text-[1.25rem] text-[#189BA5] font-medium mt-4 text-center">
+                        <span className="font-custom text-[1.25rem] text-[#E84C6D] font-medium mt-4 text-center">
                             UN information Centre for India and Bhutan
                         </span>
                     </div>
 
           <div className="flex flex-col items-center mx-[5.188rem]">
             <Image
-              src="/images/colab-3.svg"
+              src="/images/colab-3.png"
               width={469.4}
               height={166}
               alt="collaborators"
@@ -58,14 +58,14 @@ export default function Main() {
             alt="mobile-collaborators"
           />
           <div className="flex px-8">
-            <div className="font-custom font-semibold text-[0.625rem] text-[#189BA5] text-center">
+            <div className="font-custom font-semibold text-[0.625rem] text-[#E84C6D] text-center">
               UNESCO (INCCU)
             </div>
-            <div className="font-custom font-semibold text-[0.625rem] text-[#189BA5] text-center ml-[1.375rem]">
+            <div className="font-custom font-semibold text-[0.625rem] text-[#E84C6D] text-center ml-[1.375rem]">
               UN information Centre <br />
               for India and Bhutan
             </div>
-            <div className="font-custom font-semibold text-[0.625rem] text-[#189BA5] text-center ml-[1.25rem]">
+            <div className="font-custom font-semibold text-[0.625rem] text-[#E84C6D] text-center ml-[1.25rem]">
               MUN Refugee <br />
               Challenge
             </div>
@@ -112,29 +112,29 @@ export default function Main() {
               height={230}
               alt="legacy"
             />
-            <span className="mt-[0.25rem] text-[1.25rem] font-custom text-[#189BA5] font-medium">
+            <span className="mt-[0.25rem] text-[1.25rem] font-custom text-[#E84C6D] font-medium">
               Conferences
             </span>
           </div>
           <div className="flex flex-col items-center">
             <Image
-              src="/images/legacy-circle2.png"
+              src="/images/legacy-circle21.png"
               width={230}
               height={230}
               alt="legacy"
             />
-            <span className="mt-[0.25rem] text-[1.25rem] font-custom text-[#189BA5] font-medium">
+            <span className="mt-[0.25rem] text-[1.25rem] font-custom text-[#E84C6D] font-medium">
               Nationalities
             </span>
           </div>
           <div className="flex flex-col items-center">
             <Image
-              src="/images/legacy-circle3.svg"
+              src="/images/legacy-circle31.png"
               width={230}
               height={230}
               alt="legacy"
             />
-            <span className="mt-[0.25rem] text-[1.25rem] font-custom text-[#189BA5] font-medium">
+            <span className="mt-[0.25rem] text-[1.25rem] font-custom text-[#E84C6D] font-medium">
               Delegates
             </span>
           </div>
@@ -148,7 +148,7 @@ export default function Main() {
               height={100}
               alt="legacy"
             />
-            <span className="mt-[0.25rem] text-xs font-custom text-[#189BA5] font-semibold">
+            <span className="mt-[0.25rem] text-xs font-custom text-[#E84C6D] font-semibold">
               Conferences
             </span>
           </div>
@@ -159,7 +159,7 @@ export default function Main() {
               height={100}
               alt="legacy"
             />
-            <span className="mt-[0.25rem] text-xs font-custom text-[#189BA5] font-semibold">
+            <span className="mt-[0.25rem] text-xs font-custom text-[#E84C6D] font-semibold">
               Countries
             </span>
           </div>
@@ -170,7 +170,7 @@ export default function Main() {
               height={100}
               alt="legacy"
             />
-            <span className="mt-[0.25rem] text-xs font-custom text-[#189BA5] font-semibold">
+            <span className="mt-[0.25rem] text-xs font-custom text-[#E84C6D] font-semibold">
               Delegates
             </span>
           </div>

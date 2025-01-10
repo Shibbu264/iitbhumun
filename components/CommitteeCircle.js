@@ -10,10 +10,11 @@ export default function CommitteeCircle(props) {
     }
 
     return (
-        <Fragment>
+        
+        <Fragment >
             <button
                 onClick={handleChange}
-                className="mx-2 w-[11.313rem] h-[11.313rem] rounded-full shadow-[#189BA5]/20 shadow-xl top-[12.5rem] left-[9.836rem] bg-white"
+                className="mx-2 w-[11.313rem] h-[11.313rem] rounded-full shadow-[#E84C6D]/20 shadow-xl top-[12.5rem] left-[9.836rem] bg-white"
             >
                 <div className="flex flex-col items-center">
                     <div className="pt-[1.688rem]">
@@ -24,7 +25,7 @@ export default function CommitteeCircle(props) {
                             alt=""
                         />
                     </div>
-                    <div className="font-bold font-sans text-[1.2rem] pb-2 text-[#189BA5]">
+                    <div className="font-bold font-sans text-[1.2rem] pb-2 text-[#E84C6D]">
                         {props.title}
                     </div>
                 </div>
