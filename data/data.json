@@ -140,7 +140,7 @@
     {
       "id": 4,
       "question": "What committees are being simulated?",
-      "ans": "AIPPM, DISEC, ECOSOC, UNODC, UNCSW, WTO, CCC and Lok Sabha alongside the International Press."
+      "ans": "AIPPM, JPC, UNCSW, UNHRC, UNODC , BCCI, GA LEGAL, DISEC alongside the International Press."
     },
     {
       "id": 5,
@@ -155,12 +155,12 @@
     {
       "id": 7,
       "question": "When is the conference?",
-      "ans": "The Conference will be held between 3-5 February 2023. Save the date!"
+      "ans": "The Conference will be held between 21-23 February 2025. Save the date!"
     },
     {
       "id": 8,
       "question": "How will the conference be conducted?",
-      "ans": "IITBHU MUN 2023 will be conducted offline at the IIT(BHU) Varanasi campus."
+      "ans": "IITBHU MUN 2025 will be conducted offline at the IIT(BHU) Varanasi campus."
     },
     {
       "id": 9,
@@ -477,10 +477,7 @@
     { "source": "/images/MUN-260.jpg", "title": "kvt" },
     { "source": "/images/mun4.jpg", "title": "kvt" },
     { "source": "/images/MUN-261.jpg", "title": "kvt" },
-    { "source": "/images/mun6.jpg", "title": "kvt" },
-    { "source": "/images/MUN-192.jpg", "title": "kvt" },
-    { "source": "/images/MUN-30.jpg", "title": "kvt" },
-    { "source": "/images/MUN-250.jpg", "title": "kvt" }
+    { "source": "/images/mun6.jpg", "title": "kvt" }
   ],
   "placesCarousel": [
     { "source": "/images/kvt.webp", "title": "kvt" },
@@ -755,7 +752,7 @@
     "T C Tok", 
     "Rohit Rajendra Pawar"
   ],
-  "uncsw": [
+ "uncsw": [
     "Select an option",
     "Afghanistan", 
     "Albania", 
@@ -1165,3 +1162,4 @@
   ],
   "ip": ["Select an option", "Al Jazeera", "Associated Press", "Reuters"]
 }
+

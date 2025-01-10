@@ -10,14 +10,14 @@ import { useSession } from 'next-auth/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeDialog } from '../../../lib/slices/GlobalDialogWrapperSlice';
 import { setUser } from '../../../lib/slices/userSlice';
-
+import { useRouter } from 'next/router';
 // Constant for committee mapping
 const COMMITTEE_OPTIONS = {
   'None': [],
   'JPC': data.jpc,
   'UNODC': data.unodc,
   'AIPPM': data.aippm,
-  'BCCI': data.BCCI,
+  'BCCI': data.bcci,
   'DISEC': data.disec,
   'UNCSW': data.uncsw,
   'UNHRC': data.unhrc,
@@ -45,6 +45,7 @@ const Register = () => {
   const dispatch=useDispatch()
   const eventId = Math.floor(100000 + Math.random() * 900000);
   const user=useSelector(state=>state.user)
+  const router=useRouter()
   const session=useSession()
   const [isPersonalInfoStage, setIsPersonalInfoStage] = useState(true);
   const [formInput, setFormInput] = useState({
@@ -192,6 +193,7 @@ const Register = () => {
         throw new Error(data.message);
       }
       // Show success message and redirect
+
       setLoading(false)
       toast.success("Registration successfull")
       dispatch(closeDialog())
@@ -263,10 +265,18 @@ const Register = () => {
               </Button>
             )}
             <button 
+              disabled={loading}
               type="submit"
               className="bg-green-500 text-white py-2 px-4 rounded"
             >
               {isPersonalInfoStage ? 'Next' : 'Submit'}
+            </button>
+            <button 
+              onClick={()=>{dispatch(closeDialog())}}
+              type="button"
+              className="bg-red-500 text-white py-2 px-4 rounded"
+            >
+              Close
             </button>
           </div>
         </form>

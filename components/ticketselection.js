@@ -18,7 +18,6 @@ const ticketTypes = [
     id: 'Mock',
     label: 'Mock'
   },
-  
 ];
 
 export default function TicketSelection({ registration }) {
@@ -29,6 +28,16 @@ export default function TicketSelection({ registration }) {
       <Typography variant="h5" gutterBottom>
         Purchase Ticket
       </Typography>
+      
+      {/* Temporary Coming Soon Message */}
+      <Typography variant="h6" color="primary" align="center" sx={{ mt: 3 }}>
+        Payment Coming Soon!
+      </Typography>
+      <Typography variant="body1" color="textSecondary" align="center" sx={{ mt: 1 }}>
+        Please check back later to purchase your tickets.
+      </Typography>
+
+      {/* Original ticket selection code - commented out
       <Box>
         <Typography variant="subtitle2" color="textSecondary" gutterBottom>
           Select Ticket Type
@@ -69,6 +78,7 @@ export default function TicketSelection({ registration }) {
           </Box>
         )}
       </Box>
+      */}
     </Box>
   );
 }

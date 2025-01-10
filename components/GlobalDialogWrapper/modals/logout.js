@@ -11,7 +11,7 @@ export default function Logout() {
 
   if (session) {
     return (
-      <div className="flex p-6 flex-col w-full bg-gradient-to-bl from-[#02006d] to-black justify-center items-center h-full" style={{border:'2px', borderColor:'pink'}}>
+      <div className="flex p-6 flex-col w-full bg-gradient-to-bl from-[#02006d] to-black justify-center items-center h-full sm:max-h-screen max-h-[420px]" style={{border:'2px', borderColor:'pink'}}>
           <div className="flex flex-col items-center">
             <h2 className="text-[#E84C6D] font-bold mt-10 text-[24px]">
               Confirm session termination ?

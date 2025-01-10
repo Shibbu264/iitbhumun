@@ -28,23 +28,25 @@ export default function Dashboard() {
     const session = useSession()
     const COMMITTEE_OPTIONS = {
         'None': [],
+        'JPC': data.jpc,
+        'UNODC': data.unodc,
         'AIPPM': data.aippm,
-        'Lok Sabha': data.ls,
-        'CCC': data.ccc,
-        'UNCSW': data.uncsw,
-        'ECOSOC': data.ecosoc,
+        'BCCI': data.bcci,
         'DISEC': data.disec,
-        'WTO(Online)': data.wto,
-        'UNODC(Online)': data.unodc,
-        'International Press(Hybrid)': data.ip
-    };
+        'UNCSW': data.uncsw,
+        'UNHRC': data.unhrc,
+        'GA-LEGAL': data.ga_legal,
+      };
 
     useEffect(() => {
-        fetchRegistration();
-    }, [session.status]);
+        if (session.status == "authenticated") 
+        {
+            fetchRegistration();
+        }
+    }, [session]);
 
     const fetchRegistration = async () => {
-        if (session.status == "loading" || session.status == "unauthenticated") { return; }
+
         try {
             const response = await fetch('/api/register');
             const data = await response.json();
@@ -164,7 +166,7 @@ export default function Dashboard() {
             <div className='md:mt-20 mt-16'>
                 <div className='max-w-7xl mx-auto w-full'>
                     <div className='grid grid-cols-12 gap-4 md:px-6 px-4 items-center w-full'>
-                        <div className='col-span-12'> <TicketSelection registration={registration} /></div>
+                      <div className='col-span-12'> <TicketSelection registration={registration} /></div> 
                         <div className='col-span-12 md:col-start-3 md:col-span-8'>
                             <Paper elevation={3} sx={{ p: 3 }}>
                                 <Box display="flex" justifyContent="space-between" alignItems="center" mb={3}>
