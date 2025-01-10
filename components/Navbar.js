@@ -60,17 +60,17 @@ export default function NavBar({ navbar }) {
   return (
     <div
       className={`fixed w-full z-30 font-medium sm:py-2 ${navbar
-        ? `bg-white shadow-lg border-b 1xl:shadow-[#F1F1F1]/50 shadow-[#F1F1F1]/50 text-black`
+        ? `bg-white shadow-lg border-b 1xl:shadow-[#F1F1F1]/50 shadow-[#F1F1F1]/50 text-black` 
         : `bg-none text-white `
         }`}
     >
       <div className="hidden sm:flex flex-row items-center justify-between mx-16">
         <Image
-          src="/images/active-nav-log.svg"
+          src={navbar ? "/images/red.svg" : "/images/white.svg"}
           width={50}
           height={50}
           alt="active-nav-logo"
-        />
+          />
         <div className="justify-end hidden items-center sm:flex space-x-12 2xl:space-x-24 font-medium">
           <Link href="home">
             <button className=" 2xl:text-xl hover:text-[#189BA5] duration-100">
@@ -122,6 +122,7 @@ export default function NavBar({ navbar }) {
                 width={52}
                 height={20}
                 alt="mobile-actinav"
+                style={{ filter: `invert(${navbar ? 0 : 1})` }}
               />
             </MenuHandler>
             <MenuList className="sm:hidden absolute z-30 top-0 h-full w-[100vw] rounded-none flex flex-col items-center justify-center bg-[#189BA5] bg-opacity-50 text-white text-3xl font-heading font-bold text-center backdrop-blur-lg">
@@ -137,7 +138,7 @@ export default function NavBar({ navbar }) {
         </div>
         <div className={`${!navbar ? 'hidden' : ''}`}>
           <Image
-            src="/images/mobile-activenav-logo.svg"
+            src="/images/red.svg"
             width={52}
             height={54.45}
             alt="mobile-activenav-logo"
