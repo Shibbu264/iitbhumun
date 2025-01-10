@@ -107,7 +107,7 @@ export default function Main() {
         <div className="hidden sm:flex justify-between">
           <div className="flex flex-col items-center">
             <Image
-              src="/images/conferences.svg"
+              src="/images/conference.png"
               width={230}
               height={230}
               alt="legacy"
@@ -118,7 +118,7 @@ export default function Main() {
           </div>
           <div className="flex flex-col items-center">
             <Image
-              src="/images/legacy-circle21.png"
+              src="/images/legacy-circle22.png"
               width={230}
               height={230}
               alt="legacy"
@@ -129,7 +129,7 @@ export default function Main() {
           </div>
           <div className="flex flex-col items-center">
             <Image
-              src="/images/legacy-circle31.png"
+              src="/images/legacy-circle32.png"
               width={230}
               height={230}
               alt="legacy"
