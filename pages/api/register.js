@@ -95,7 +95,6 @@ else if (req.method === 'PUT') {
       }
 
       const updateData = req.body;
-      
       // Remove email from update data to prevent email changes
       const { Email_ID, emailId, ...updateFields } = updateData;
 
@@ -105,13 +104,13 @@ else if (req.method === 'PUT') {
         },
         data: {
           eventId: updateFields.Event_ID,
-          name: updateFields.Name,
-          age: updateFields.Age,
-          gender: updateFields.Gender,
-          city: updateFields.City,
-          country: updateFields.Country,
-          instituteName: updateFields.Institute_Name,
-          mobileNumber: updateFields.Mobile_Number,
+          name: updateFields.name,
+          age: updateFields.age,
+          gender: updateFields.gender,
+          city: updateFields.city,
+          country: updateFields.country,
+          instituteName: updateFields.instituteName,
+          mobileNumber: updateFields.mobileNumber,
           referralCode: updateFields.Referral_Code,
           numberOfMUNs: updateFields.No_of_MUNs,
           listOfPreviousMUNs: updateFields.List_of_previous_MUNs,
