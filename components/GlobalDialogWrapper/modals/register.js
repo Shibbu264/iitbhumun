@@ -35,9 +35,7 @@ const INITIAL_FORM_INPUT = {
   Institute_Name: '',
   Mobile_Number: '',
   Email_ID: '',
-  Referral_Code: '',
   No_of_MUNs: '',
-  List_of_previous_MUNs: '',
   Awards_in_previous_MUNs: '',
 };
 

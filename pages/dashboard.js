@@ -154,9 +154,7 @@ export default function Dashboard() {
         { label: 'Institute Name', key: 'instituteName' },
         { label: 'Mobile Number', key: 'mobileNumber' },
         { label: 'Email ID', key: 'emailId', readOnly: true },
-        { label: 'Referral Code', key: 'referralCode' },
         { label: 'Number of MUNs', key: 'numberOfMUNs' },
-        { label: 'Previous MUNs', key: 'listOfPreviousMUNs' },
         { label: 'Awards in MUNs', key: 'awardsInPreviousMUNs' },
     ];
 
