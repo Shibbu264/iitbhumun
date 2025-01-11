@@ -50,74 +50,62 @@
   "sponsors": [
     {
       "id": 1,
-      "src": "/images/unstop-logo.svg",
-      "height": 600,
-      "href": "https://unstop.com/conference/bhu-mun-2023-indian-institute-of-technology-iit-bhu-varanasi-577681"
+      "src": "/images/sponsor1n.png",
+      "height": 600
     },
     {
       "id": 2,
-      "src": "/images/sponsor-4.png",
-      "height": 600,
-      "href": "https://www.meraevents.com/event/iitbhu-mun-2023-for-online-international-delegates"
+      "src": "/images/sponsor2n.png",
+      "height": 600
     },
     {
       "id": 3,
-      "src": "/images/sponsor_4.png",
+      "src": "/images/sponsor3n.png",
       "height": 600
     },
     {
       "id": 4,
-      "src": "/images/sponsor_5.png",
+      "src": "/images/sponsor4n.png",
       "height": 600
     },
     {
       "id": 5,
-      "src": "/images/sponsor_6.png",
+      "src": "/images/sponsor5n.png",
       "height": 600
     },
     {
       "id": 6,
-      "src": "/images/sponsor_7.png",
+      "src": "/images/sponsor6n.png",
       "height": 600
     },
     {
       "id": 7,
-      "src": "/images/sponsor_8.png",
+      "src": "/images/sponsor7n.png",
       "height": 600
     },
     {
       "id": 8,
-      "src": "/images/sponsor_12.png",
+      "src": "/images/sponsor8n.png",
       "height": 600
     },
     {
       "id": 9,
-      "src": "/images/kewal.jpeg",
+      "src": "/images/sponsor9n.png",
       "height": 600
     },
     {
       "id": 10,
-      "src": "/images/vskill.jpeg",
+      "src": "/images/sponsor10n.png",
       "height": 600
     },
     {
       "id": 11,
-      "src": "/images/topcon.jpeg",
+      "src": "/images/sponsor11n.png",
       "height": 600
     },
     {
       "id": 12,
-      "src": "/images/shree.png",
-      "height": 600
-    },
-    {
-      "id": 13,
-      "src": "/images/universal.png",
-      "height": 600
-    },
-    {
-      "id": 14,
-      "src": "/images/unionbank.png",
+      "src": "/images/sponsor12n.png",
       "height": 600
     }
   ],
