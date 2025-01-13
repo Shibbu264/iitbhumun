@@ -9,8 +9,8 @@ export default function PersonalInfoStage ({ formInput, formErrors, onInputChang
       { id: 'Institute_Name', label: 'Institution', type: 'text' },
       { id: 'City', label: 'City', type: 'text' },
       { id: 'Country', label: 'Country', type: 'text' },
-      { id: 'Number of MUNs',label: 'Number of MUNs', key: 'numberOfMUNs',type:'number' },
-      { id: 'Awards in MUNs',label: 'Awards in MUNs', key: 'awardsInPreviousMUNs',type:'number' }
+      { id: 'No_of_MUNs',label: 'Number of MUNs',type:'number' },
+      { id: 'Awards_in_previous_MUNs',label: 'Awards in MUNs',type:'number' }
     ];
   
     return (
