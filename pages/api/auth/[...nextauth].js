@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import prisma from "../../../lib/prisma";
+import {prisma} from "../../../lib/prisma";
 
 export const authOptions = {
   secret:process.env.NEXTAUTH_SECRET,
@@ -27,6 +27,7 @@ export const authOptions = {
           },
         });
 
+        console.log(existingUser);
         token.id = existingUser?.id || user.id; // Use existing or newly created user ID
         token.formFilled = existingUser?.formFilled || false; // Attach formFilled
       }

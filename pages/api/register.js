@@ -1,7 +1,6 @@
 import { prisma } from '../../lib/prisma';
 import { getServerSession } from 'next-auth';
 import { authOptions } from "./auth/[...nextauth]";
-
 export default async function handler(req, res) {
     const session = await getServerSession(req, res, authOptions);
     if (req.method === 'GET') {
@@ -59,6 +58,7 @@ export default async function handler(req, res) {
         awardsInPreviousMUNs: registrationData.Awards_in_previous_MUNs,
         committees: registrationData.committees,
         countryPreferences: registrationData.countryPreferences,
+        referralCode: registrationData.Referral_Code,
         alloted:{
           set:[]
         },
@@ -113,6 +113,7 @@ else if (req.method === 'PUT') {
           awardsInPreviousMUNs: updateFields.awardsInPreviousMUNs,
           committees: updateFields.committees,
           countryPreferences: updateFields.countryPreferences,
+          referralCode: updateFields.referralCode,
         },
       });
 

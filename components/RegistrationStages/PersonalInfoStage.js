@@ -10,7 +10,8 @@ export default function PersonalInfoStage ({ formInput, formErrors, onInputChang
       { id: 'City', label: 'City', type: 'text' },
       { id: 'Country', label: 'Country', type: 'text' },
       { id: 'No_of_MUNs',label: 'Number of MUNs',type:'number' },
-      { id: 'Awards_in_previous_MUNs',label: 'Awards in MUNs',type:'number' }
+      { id: 'Awards_in_previous_MUNs',label: 'Awards in MUNs',type:'number' },
+      { id: 'Referral_Code',label: 'Referral Code',type:'text' }
     ];
   
     return (
@@ -18,16 +19,16 @@ export default function PersonalInfoStage ({ formInput, formErrors, onInputChang
         {personalInfoFields.map(field => (
           <div key={field.id} className="mb-4 w-full">
             <label htmlFor={field.id} className="block text-black font-bold mb-2">
-              {field.label}*
+              {field.id === 'Referral_Code' ? field.label : `${field.label}*`}
             </label>
             <input 
-            onChange={onInputChange}
+              onChange={onInputChange}
               type={field.type}
               id={field.id}
               value={formInput[field.id]}
               disabled={field.id=='Email_ID'}
               className="w-full text-blue-gray-900 px-4 py-2 border rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              required 
+              required={field.id !== 'Referral_Code'}
             />
             {formErrors[field.id] && (
               <p className="text-red-500 text-sm mt-1">{formErrors[field.id]}</p>

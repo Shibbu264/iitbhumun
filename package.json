@@ -2,14 +2,13 @@
   "name": "iitbhumun",
   "version": "0.1.0",
   "private": true,
-"scripts": {
-  "dev": "next dev",
-  "build": "prisma generate && next build",
-  "start": "next start",
-  "lint": "next lint",
-  "postinstall": "prisma generate"
-}
-,
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate"
+  },
   "dependencies": {
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
@@ -24,6 +23,7 @@
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-dropdown-menu": "^2.1.2",
     "@reduxjs/toolkit": "^2.3.0",
+    "@supabase/supabase-js": "^2.47.13",
     "daisyui": "^2.33.0",
     "firebase": "^9.23.0",
     "next": "12.3.1",
@@ -37,6 +37,7 @@
     "react-redux": "^9.1.2",
     "react-select": "^5.6.0",
     "sheetdb-js": "^1.0.3",
+    "swr": "^2.3.0",
     "uuid": "^9.0.0",
     "webpack": "^5.88.1",
     "yarn": "^1.22.19"

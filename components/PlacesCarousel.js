@@ -7,7 +7,7 @@ import data from '../data/data.json';
 
 const PlacesCarousel = () => {
 
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);   
 
     const prevSlide = () => {
         const isFirstSlide = currentIndex === 0;

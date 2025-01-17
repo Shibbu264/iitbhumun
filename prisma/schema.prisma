@@ -4,21 +4,24 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = "postgresql://postgres.qmmytleeitfcvlsvudqx:Tshirtstrip123@@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
 }
 
 model User {
-  id         Int      @id @default(autoincrement())
-  email      String   @unique
+  id         Int       @id @default(autoincrement())
+  email      String    @unique
   name       String?
-  createdAt  DateTime @default(now())
-  formFilled Boolean  @default(false)
+  createdAt  DateTime  @default(now())
+  formFilled Boolean   @default(false)
+  payments   Payment[]
 }
+
 model Portfolio {
-  id Int @id @default(autoincrement())
-  name String 
+  id        Int      @id @default(autoincrement())
+  name      String
   portfolio String[] @default([])
 }
+
 model Registration {
   id                   Int      @id @default(autoincrement())
   eventId              Int      @map("Event_ID")
@@ -29,16 +32,32 @@ model Registration {
   country              String?  @map("Country")
   instituteName        String   @map("Institute_Name")
   mobileNumber         String   @map("Mobile_Number")
-  emailId              String   @map("Email_ID") @unique
-  referralCode         String?  @map("Referral_Code")
+  emailId              String   @unique @map("Email_ID")
+  referralCode         String?  @default("") @map("Referral_Code")
   numberOfMUNs         String?  @map("No_of_MUNs")
   listOfPreviousMUNs   String?  @map("List_of_previous_MUNs")
   awardsInPreviousMUNs String?  @map("Awards_in_previous_MUNs")
-  committees           String[] // Stored as JSON array
+  committees           String[]
   countryPreferences   Json
-  alloted              String[]  @default([])
-  allotmentApproved    Boolean?  @default(false)
-  paymentDone          Boolean? @default(false) // Stored as nested JSON array
+  paymentDone          Boolean? @default(false)
+  allotmentApproved    Boolean? @default(false)
+  alloted              String[] @default([])
+  myReferralCount      Int?     @default(0)
+  myReferralCode       String?  @default("")
 
   @@map("registrations")
+}
+
+model Payment {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  ticketType String
+  amount     Float
+  imageUrl   String
+  idCardUrl  String   @default("")
+  status     String   @default("pending")
+  createdAt  DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id])
+
+  @@map("payments")
 }

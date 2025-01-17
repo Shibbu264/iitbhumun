@@ -37,6 +37,7 @@ const INITIAL_FORM_INPUT = {
   Email_ID: '',
   No_of_MUNs: '',
   Awards_in_previous_MUNs: '',
+  Referral_Code: '',
 };
 
 const Register = () => {
