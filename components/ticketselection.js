@@ -2,8 +2,6 @@ import { Box, Typography, FormControl, Select, MenuItem, Button } from '@mui/mat
 import { useState } from 'react';
 import Image from 'next/image';
 import toast from 'react-hot-toast';
-import { storage, database } from '../components/firebase';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { createClient } from '@supabase/supabase-js';
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
