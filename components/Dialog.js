@@ -7,7 +7,7 @@ import {
 } from "@material-tailwind/react";
 import Image from "next/image";
 
-const DialogBox = (props) => {
+export default function DialogBox (props) {
     return (
         <Dialog open={props.open} size={"xl"} handler={props.handleOpen} >
             <DialogHeader className="font-bold font-sans text-[2rem]   text-[#189BA5]">
@@ -74,4 +74,3 @@ const DialogBox = (props) => {
     );
 };
 
-export default DialogBox;

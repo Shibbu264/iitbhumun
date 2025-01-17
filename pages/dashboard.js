@@ -227,6 +227,7 @@ export default function Dashboard() {
             </Box>
         );
     });
+    PaymentStatusSection.displayName = 'PaymentStatusSection';
 
     const AllocationSection = React.memo(({ registration, COMMITTEE_OPTIONS }) => {
         const [showRequestForm, setShowRequestForm] = useState(false);
@@ -506,6 +507,7 @@ export default function Dashboard() {
             </Box>
         );
     });
+    AllocationSection.displayName = 'AllocationSection';
 
     if (loading || registration == null) {
         return (
