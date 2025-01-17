@@ -2,9 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CloseReg from './CloseReg';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { openDialog } from '../lib/slices/GlobalDialogWrapperSlice';
+import { useSession } from 'next-auth/react';
 
 export default function Footer() {
   const [closeReg, setCloseReg] = useState(true);
+  const dispatch = useDispatch();
+  const session = useSession();
   const handleChange = () => {
     setCloseReg(false);
     setTimeout(() => {
@@ -78,11 +83,11 @@ export default function Footer() {
                 Participation
               </div>
               <div>
-                 <button  className="bg-[#E84C6D] hover:shadow-xl text-[1.125rem] font-custom font-medium mt-[1.25rem] text-white rounded-lg px-10 py-3">
+                 {/* <button  className="bg-[#E84C6D] hover:shadow-xl text-[1.125rem] font-custom font-medium mt-[1.25rem] text-white rounded-lg px-10 py-3">
                  <Link href={'/registerpage'}>    Register</Link> 
-                </button>
-                <button  className="bg-[#E84C6D] hover:shadow-xl text-[1.125rem] mx-6 font-custom font-medium mt-[1.25rem] text-white rounded-lg px-10 py-3">
-                 <Link href={'/loginpage'}>    Login</Link> 
+                </button> */}
+                <button onClick={() => dispatch(openDialog('login'))} className="bg-[#E84C6D] hover:shadow-xl text-[1.125rem] mx-6 font-custom font-medium mt-[1.25rem] text-white rounded-lg px-10 py-3">
+                  Login
                 </button>
 
               </div>
@@ -204,12 +209,12 @@ export default function Footer() {
           <div className="ml-4">
             <div className="flex flex-col">
               <p className="font-bold">Participation</p>
-              <button  className="bg-[#E84C6D] hover:shadow-xl text-[1.125rem] mx-6 font-custom font-medium mt-[1.25rem] text-white rounded-lg px-10 py-3">
-                 <Link href={'/loginpage'}>    Login</Link> 
-                </button>
-                <button  className="bg-[#E84C6D] text-[1.125rem] font-custom font-medium mt-[1.25rem] text-white rounded-lg px-10 py-3">
+              <button onClick={() => dispatch(openDialog('login'))} className="bg-[#E84C6D] hover:shadow-xl text-[1.125rem] mx-6 font-custom font-medium mt-[1.25rem] text-white rounded-lg px-10 py-3">
+                Login
+              </button>
+              {/* <button  className="bg-[#E84C6D] text-[1.125rem] font-custom font-medium mt-[1.25rem] text-white rounded-lg px-10 py-3">
                  <Link href={'/registerpage'}> Register</Link>
-                </button>
+                </button> */}
                 
               
             </div>
