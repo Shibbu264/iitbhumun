@@ -13,7 +13,7 @@ model User {
   name       String?
   createdAt  DateTime  @default(now())
   formFilled Boolean   @default(false)
-  payments   Payment[]
+  payments   Payment[] 
 }
 
 model Portfolio {
