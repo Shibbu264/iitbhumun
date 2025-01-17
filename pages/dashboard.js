@@ -448,7 +448,7 @@ export default function Dashboard() {
                                 Request New Allocation
                             </Typography>
                             <Typography variant="body2" color="text.secondary" mb={2}>
-                                Select up to 2 country preferences for each committee you're interested in.
+                                {"Select up to 2 country preferences for each committee you're interested in."}
                             </Typography>
                             
                             {Object.keys(COMMITTEE_OPTIONS).map(committee => {
