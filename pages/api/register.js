@@ -32,17 +32,26 @@ export default async function handler(req, res) {
     }
 
     const registrationData = req.body;
-    const existingRegistration = await prisma.registration.findFirst({
-        where: {
-          emailId: registrationData.Email_ID
-        }
-      });
 
-      if (existingRegistration) {
-        return res.status(409).json({ 
-          message: 'A registration with this email already exists' 
-        });
+    // First check for existing registration with same email
+    const existingRegistration = await prisma.registration.findFirst({
+      where: {
+        emailId: registrationData.Email_ID
       }
+    });
+
+    if (existingRegistration) {
+      return res.status(409).json({ 
+        message: 'A registration with this email already exists' 
+      });
+    }
+
+    // Handle referral code
+    let finalReferralCode = "";  // Default empty string to match schema default
+    if (registrationData.Referral_Code) {
+      finalReferralCode = String(registrationData.Referral_Code).trim();
+    }
+
     const registration = await prisma.registration.create({
       data: {
         eventId: registrationData.Event_ID,
@@ -58,7 +67,7 @@ export default async function handler(req, res) {
         awardsInPreviousMUNs: registrationData.Awards_in_previous_MUNs,
         committees: registrationData.committees,
         countryPreferences: registrationData.countryPreferences,
-        referralCode: registrationData.Referral_Code,
+        referralCode: finalReferralCode,  // Use the processed referral code
         alloted:{
           set:[]
         },
