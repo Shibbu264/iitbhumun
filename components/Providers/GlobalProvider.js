@@ -2,8 +2,9 @@ import { ThemeProvider } from '@material-tailwind/react';
 import { Toaster} from 'react-hot-toast';
 import GlobalDialog from '../GlobalDialogWrapper/GlobalDialogWrapper';
 import AuthGuard from './Authguard';
+import { forwardRef } from 'react';
 
-const GlobalProvider = ({ children }) => {
+const GlobalProvider = forwardRef(({ children }, ref) => {
   return (
     <ThemeProvider>
        <Toaster position="top-center" />
@@ -14,6 +15,8 @@ const GlobalProvider = ({ children }) => {
         </GlobalDialog>
     </ThemeProvider>
   );
-};
+});
+
+GlobalProvider.displayName = 'GlobalProvider';
 
 export default GlobalProvider;

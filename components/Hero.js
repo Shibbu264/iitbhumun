@@ -18,10 +18,9 @@ export default function Hero() {
   return (
     <div className="">
     <div className="sm:grid hidden relative">
-      <div className="row-span-full col-span-full">
+      <div className="row-span-full col-span-full relative">
         <Image
           src="/images/HomeFlush2.svg"
-          style={{ position: "absolute" }}
           width={1920}
           height={1080}
           layout="responsive"
@@ -89,7 +88,6 @@ export default function Hero() {
             height={2318}
             className="object-cover w-full h-full"
             alt="hero images"
-            priority
           />
         </div>
 

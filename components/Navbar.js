@@ -116,14 +116,16 @@ export default function NavBar({ navbar }) {
       >
         <div>
           <Menu>
-            <MenuHandler className={`${!navbar ? 'hidden' : ''}`}>
-              <Image
-                src="/images/mobile-actinav.svg"
-                width={52}
-                height={20}
-                alt="mobile-actinav"
-                style={{ filter: `invert(${navbar ? 0 : 1})` }}
-              />
+            <MenuHandler>
+              <button className={`${!navbar ? 'hidden' : ''}`}>
+                <Image
+                  src="/images/mobile-actinav.svg"
+                  width={52}
+                  height={20}
+                  alt="mobile-actinav"
+                  style={{ filter: `invert(${navbar ? 0 : 1})` }}
+                />
+              </button>
             </MenuHandler>
             <MenuList className="sm:hidden absolute z-30 top-0 h-full w-[100vw] rounded-none flex flex-col items-center justify-center bg-[#189BA5] bg-opacity-50 text-white text-3xl font-heading font-bold text-center backdrop-blur-lg">
               <MenuItem className='text-center hover:text-yellow-400'><Link href="/">Home</Link></MenuItem>

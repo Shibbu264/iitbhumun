@@ -5,6 +5,7 @@ export default function Document() {
   return (
     <Html>
       <Head><link rel="stylesheet" href="/styles.css" />
+        <link rel="preconnect" href="/" crossOrigin="anonymous" />
         {/* Seo needs to be done */}
         <title>IITBHU MUN</title>
         <meta

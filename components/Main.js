@@ -78,26 +78,18 @@ export default function Main() {
           Letter from Secretary-General
         </p>
         <div className="flex justify-center mt-8 sm:mt-[3.75rem]">
-          <p className="px-8 w-[58.75rem] sm:w-[73.375rem] text-[#03001E] sm:text-lg font-light font-custom text-justify">
+          <div className="px-8 w-[58.75rem] sm:w-[73.375rem] text-[#03001E] sm:text-lg font-light font-custom text-justify">
             <p>Dear Delegates, Faculty Advisors, and Members of the Secretariat, </p>
-            <p className='mt-2'>It is with immense pride and anticipation that I welcome you to the 13th edition of IITBHU Model United Nations. Representing one of India&#39;s premier institutions, IITBHU MUN has long been a stage where intellect meets diplomacy, and ideas transform into action.
-            </p>
-            <p className='mt-2'>Over the past twelve years, this conference has not only become one of the largest MUNs in India but also a hallmark of excellence, attracting delegates of unparalleled caliber and distinguished leaders from across the globe. From policymakers like Dr. Ajay Kumar, former Defence Secretary of India, to other eminent personalities, our legacy is built on the insights of those who shape the world and the ambitions of those who will inherit it.
-</p>
-            <p>This year, we continue that legacy with a renewed vision. IITBHU MUN is not merely a conference—it is a confluence of bright minds, a platform for bold ideas, and a crucible for innovative solutions to global challenges. It is where debate transcends rhetoric and becomes a force for change, where every resolution carries the weight of potential impact.
-</p>
-            <p className='mt-2'>As Secretary-General, I am honored to lead this year&#39;s endeavor. With the combined strength of IITBHU&#39;s storied reputation and the relentless dedication of our extraordinary Secretariat, this edition promises to elevate our already illustrious standards.
-</p>
-<p className='mt-2'>To those who join us, know that this conference is more than an opportunity to engage in diplomacy—it is a chance to challenge convention, shape discourse, and leave your mark. Here, in the heart of Banaras, a city as timeless as the ideals of unity and progress we aspire to uphold, you will take part in something truly remarkable.
-</p>
-            <p className='mt-2'>I look forward to seeing your passion, creativity, and resolve define the 13th edition of IITBHU MUN. The stage is yours.
-</p>
-            <p className='mt-2 font-bold'>Yours sincerely,
-</p>
+            <p className='mt-2'>It is with immense pride and anticipation that I welcome you to the 13th edition of IITBHU Model United Nations. Representing one of India&#39;s premier institutions, IITBHU MUN has long been a stage where intellect meets diplomacy, and ideas transform into action.</p>
+            <p className='mt-2'>Over the past twelve years, this conference has not only become one of the largest MUNs in India but also a hallmark of excellence, attracting delegates of unparalleled caliber and distinguished leaders from across the globe. From policymakers like Dr. Ajay Kumar, former Defence Secretary of India, to other eminent personalities, our legacy is built on the insights of those who shape the world and the ambitions of those who will inherit it.</p>
+            <p>This year, we continue that legacy with a renewed vision. IITBHU MUN is not merely a conference—it is a confluence of bright minds, a platform for bold ideas, and a crucible for innovative solutions to global challenges. It is where debate transcends rhetoric and becomes a force for change, where every resolution carries the weight of potential impact.</p>
+            <p className='mt-2'>As Secretary-General, I am honored to lead this year&#39;s endeavor. With the combined strength of IITBHU&#39;s storied reputation and the relentless dedication of our extraordinary Secretariat, this edition promises to elevate our already illustrious standards.</p>
+            <p className='mt-2'>To those who join us, know that this conference is more than an opportunity to engage in diplomacy—it is a chance to challenge convention, shape discourse, and leave your mark. Here, in the heart of Banaras, a city as timeless as the ideals of unity and progress we aspire to uphold, you will take part in something truly remarkable.</p>
+            <p className='mt-2'>I look forward to seeing your passion, creativity, and resolve define the 13th edition of IITBHU MUN. The stage is yours.</p>
+            <p className='mt-2 font-bold'>Yours sincerely,</p>
             <p className='mt-2 font-bold'>Ron Rexy</p>
-            <p className='font-bold'>Secretary-General, IITBHU MUN&#39;25
-</p>
-          </p>
+            <p className='font-bold'>Secretary-General, IITBHU MUN&#39;25</p>
+          </div>
         </div>
       </div>
       <div className="mt-16 flex flex-col space-y-10 max-w-[58.75rem] sm:max-w-[73.375rem] mx-auto">

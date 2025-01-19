@@ -11,7 +11,7 @@ export default function CountdownElement() {
         <div className="grid grid-cols-4 gap-3 lg:gap-5 mt-12 max-w-[90%] lg:max-w-[80%] 2xl:max-w-[60%] mx-auto">
           {[days, hours, minutes, seconds].map((count, index) => (
               <div
-                key={count}
+                key={`countdown-${index}-${count}`}
                 className="p-5 md:py-8 lg:py-10 text-4xl sm:text-5xl md:text-7xl rounded-md text-[#E84C6D] text-center border-[#E84C6D] border-2"
               >
                 {count}
