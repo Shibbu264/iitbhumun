@@ -10,7 +10,7 @@ const AdminPanelPrisma = () => {
   const [payments, setPayments] = useState([]);
   const [activeTab, setActiveTab] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(25);
+  const [itemsPerPage, setItemsPerPage] = useState(25);
 
   useEffect(() => {
     const loginStatus = localStorage.getItem('adminLoggedIn') === 'true';
@@ -223,46 +223,68 @@ const AdminPanelPrisma = () => {
   };
 
   const PaginationControls = () => (
-    <div className="flex justify-center items-center gap-2 mt-4 mb-8">
-      <button
-        onClick={() => paginate(currentPage - 1)}
-        disabled={currentPage === 1}
-        className={`px-4 py-2 rounded ${
-          currentPage === 1
-            ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
-            : 'bg-blue-500 text-white hover:bg-blue-600'
-        }`}
-      >
-        Previous
-      </button>
-      
-      <div className="flex gap-2">
-        {[...Array(totalPages)].map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => paginate(idx + 1)}
-            className={`px-4 py-2 rounded ${
-              currentPage === idx + 1
-                ? 'bg-blue-500 text-white'
-                : 'bg-gray-200 hover:bg-gray-300'
-            }`}
-          >
-            {idx + 1}
-          </button>
-        ))}
+    <div className="flex flex-col items-center gap-4 mt-4 mb-8">
+      <div className="flex items-center gap-2">
+        <label htmlFor="itemsPerPage" className="text-sm font-medium text-gray-700">
+          Items per page:
+        </label>
+        <select
+          id="itemsPerPage"
+          value={itemsPerPage}
+          onChange={(e) => {
+            setItemsPerPage(Number(e.target.value));
+            setCurrentPage(1); // Reset to first page when changing items per page
+          }}
+          className="border rounded px-2 py-1 text-sm"
+        >
+          <option value={10}>10</option>
+          <option value={25}>25</option>
+          <option value={50}>50</option>
+          <option value={100}>100</option>
+        </select>
       </div>
 
-      <button
-        onClick={() => paginate(currentPage + 1)}
-        disabled={currentPage === totalPages}
-        className={`px-4 py-2 rounded ${
-          currentPage === totalPages
-            ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
-            : 'bg-blue-500 text-white hover:bg-blue-600'
-        }`}
-      >
-        Next
-      </button>
+      <div className="flex justify-center items-center gap-2">
+        <button
+          onClick={() => paginate(currentPage - 1)}
+          disabled={currentPage === 1}
+          className={`px-4 py-2 rounded ${
+            currentPage === 1
+              ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+              : 'bg-blue-500 text-white hover:bg-blue-600'
+          }`}
+        >
+          Previous
+        </button>
+        
+        <div className="flex gap-2">
+          {[...Array(totalPages)].map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => paginate(idx + 1)}
+              className={`px-4 py-2 rounded ${
+                currentPage === idx + 1
+                  ? 'bg-blue-500 text-white'
+                  : 'bg-gray-200 hover:bg-gray-300'
+              }`}
+            >
+              {idx + 1}
+            </button>
+          ))}
+        </div>
+
+        <button
+          onClick={() => paginate(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className={`px-4 py-2 rounded ${
+            currentPage === totalPages
+              ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+              : 'bg-blue-500 text-white hover:bg-blue-600'
+          }`}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 
@@ -442,7 +464,8 @@ const AdminPanelPrisma = () => {
                   <p><strong>Mobile Number:</strong> {registration.mobileNumber || 'N/A'}</p>
                   <p><strong>College name: </strong>{registration.instituteName || 'N/A'}</p>
                   <p><strong>Referral Code: </strong>{registration.referralCode || 'None'}</p>
-                  
+                  <p><strong>Number of MUNs: </strong>{registration.numberOfMUNs || 'None'}</p>
+                  <p><strong>Awards in Previous MUNs: </strong>{registration.awardsInPreviousMUNs || 'None'}</p>
                   <p>
                     <strong>Allotment Status: </strong>
                     {registration.allotmentApproved ? (

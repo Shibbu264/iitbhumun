@@ -17,7 +17,9 @@ export default async function handler(req, res) {
         instituteName: true,
         alloted: true,
         allotmentApproved: true,
-        referralCode:true
+        referralCode:true,
+        numberOfMUNs:true,
+        awardsInPreviousMUNs:true
       }
     });
     res.status(200).json(registrations);
