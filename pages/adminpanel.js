@@ -9,6 +9,8 @@ const AdminPanelPrisma = () => {
   const [allAllocations, setAllAllocations] = useState({});
   const [payments, setPayments] = useState([]);
   const [activeTab, setActiveTab] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(25);
 
   useEffect(() => {
     const loginStatus = localStorage.getItem('adminLoggedIn') === 'true';
@@ -210,6 +212,60 @@ const AdminPanelPrisma = () => {
            (currentAllotment && currentAllotment[0] === committee && currentAllotment[1] === country);
   };
 
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const totalPages = Math.ceil(registrations.length / itemsPerPage);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const getCurrentItems = (items) => {
+    return items.slice(indexOfFirstItem, indexOfLastItem);
+  };
+
+  const PaginationControls = () => (
+    <div className="flex justify-center items-center gap-2 mt-4 mb-8">
+      <button
+        onClick={() => paginate(currentPage - 1)}
+        disabled={currentPage === 1}
+        className={`px-4 py-2 rounded ${
+          currentPage === 1
+            ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+            : 'bg-blue-500 text-white hover:bg-blue-600'
+        }`}
+      >
+        Previous
+      </button>
+      
+      <div className="flex gap-2">
+        {[...Array(totalPages)].map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => paginate(idx + 1)}
+            className={`px-4 py-2 rounded ${
+              currentPage === idx + 1
+                ? 'bg-blue-500 text-white'
+                : 'bg-gray-200 hover:bg-gray-300'
+            }`}
+          >
+            {idx + 1}
+          </button>
+        ))}
+      </div>
+
+      <button
+        onClick={() => paginate(currentPage + 1)}
+        disabled={currentPage === totalPages}
+        className={`px-4 py-2 rounded ${
+          currentPage === totalPages
+            ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+            : 'bg-blue-500 text-white hover:bg-blue-600'
+        }`}
+      >
+        Next
+      </button>
+    </div>
+  );
+
   if (!isLoggedIn) {
     return (
       <div>
@@ -359,7 +415,8 @@ const AdminPanelPrisma = () => {
       {activeTab === 'all' && (
         <div className="mb-6">
           <h2 className="text-red-500 font-bold text-center my-4">Registration Details</h2>
-          {registrations.map((registration, index) => {
+          <PaginationControls />
+          {getCurrentItems(registrations).map((registration, index) => {
             const isAllotted = registration.alloted && registration.alloted.length > 0;
             const currentAllotment = isAllotted ? registration.alloted[0].split(':') : null;
             
@@ -371,7 +428,7 @@ const AdminPanelPrisma = () => {
                 }`}
               >
                 <div className="flex justify-between items-center mb-4">
-                  <p className="mr-4"><strong>{index + 1}.</strong></p>
+                  <p className="mr-4"><strong>{indexOfFirstItem + index + 1}.</strong></p>
                   {registration.paymentDone && (
                     <span className="px-2 py-1 bg-green-100 text-green-800 rounded-full text-sm">
                       Payment Verified
@@ -384,6 +441,7 @@ const AdminPanelPrisma = () => {
                   <p><strong>Name:</strong> {registration.name || 'N/A'}</p>
                   <p><strong>Mobile Number:</strong> {registration.mobileNumber || 'N/A'}</p>
                   <p><strong>College name: </strong>{registration.instituteName || 'N/A'}</p>
+                  <p><strong>Referral Code: </strong>{registration.referralCode || 'None'}</p>
                   
                   <p>
                     <strong>Allotment Status: </strong>
@@ -626,6 +684,7 @@ const AdminPanelPrisma = () => {
               </div>
             );
           })}
+          <PaginationControls />
         </div>
       )}
     </div>
