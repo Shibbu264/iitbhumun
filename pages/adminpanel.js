@@ -288,6 +288,42 @@ const AdminPanelPrisma = () => {
     </div>
   );
 
+  const handleMarkNotInterested = async (registrationId, currentAllotment) => {
+    try {
+      // First, update the allAllocations state to remove the previous allocation
+      if (currentAllotment && currentAllotment[0] !== 'NONE') {
+        const [committee, country] = currentAllotment;
+        setAllAllocations(prev => ({
+          ...prev,
+          [committee]: prev[committee].filter(c => c !== country)
+        }));
+      }
+
+      const response = await fetch('/api/allotment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          registrationId, 
+          committee: 'NONE', 
+          country: 'NONE',
+          allotmentString: 'NONE:NONE'
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to mark as not interested');
+      }
+      toast.success('Marked as not interested successfully');
+      await fetchRegistrations(); // Refresh the registrations data
+      await fetchAllAllocations(); // Refresh the allocations data
+    } catch (error) {
+      console.error('Error marking as not interested:', error);
+      toast.error('Failed to mark as not interested');
+    }
+  };
+
   if (!isLoggedIn) {
     return (
       <div>
@@ -445,10 +481,18 @@ const AdminPanelPrisma = () => {
             return (
               <div key={registration.id} 
                 className={`mb-4 p-4 border rounded shadow ${
+                  registration.alloted?.[0]?.startsWith('NONE:') ? 'bg-red-100' : 
                   registration.paymentDone ? 'bg-green-50' : 
                   isAllotted ? 'bg-blue-50' : 'bg-white'
                 }`}
               >
+                {/* Add a status banner for not interested registrations */}
+                {registration.alloted?.[0]?.startsWith('NONE:') && (
+                  <div className="mb-4 p-2 bg-red-200 text-red-700 rounded-md font-medium">
+                    Not Interested / False Registration
+                  </div>
+                )}
+
                 <div className="flex justify-between items-center mb-4">
                   <p className="mr-4"><strong>{indexOfFirstItem + index + 1}.</strong></p>
                   {registration.paymentDone && (
@@ -702,6 +746,20 @@ const AdminPanelPrisma = () => {
                               </button>
                           </div>
                       </div>
+                  )}
+
+                  {!registration.allotmentApproved && (
+                    <div className="mt-4">
+                      <button
+                        onClick={() => handleMarkNotInterested(
+                          registration.id, 
+                          registration.alloted?.[0]?.split(':')
+                        )}
+                        className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md transition-colors"
+                      >
+                        Mark as Not Interested
+                      </button>
+                    </div>
                   )}
                 </div>
               </div>
