@@ -171,35 +171,52 @@ const AdminPanelPrisma = () => {
     }
   };
 
-  const handleRejectRequest = async (registration) => {
-    try {
-        const updatedPreferences = {
-            ...registration.countryPreferences
-        };
-        delete updatedPreferences.pendingRequest;
+  // In adminpanel.js, modify handleRejectRequest:
 
-        const response = await fetch('/api/register', {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                ...registration,
-                countryPreferences: updatedPreferences
-            }),
-        });
+const handleRejectRequest = async (registration) => {
+  try {
+      // Prepare the data in the format expected by the API
+      const updateData = {
+          name: registration.name,
+          age: registration.age,
+          gender: registration.gender,
+          city: registration.city,
+          country: registration.country,
+          instituteName: registration.instituteName,
+          mobileNumber: registration.mobileNumber,
+          numberOfMUNs: registration.numberOfMUNs,
+          awardsInPreviousMUNs: registration.awardsInPreviousMUNs,
+          committees: registration.committees,
+          referralCode: registration.referralCode,
+          countryPreferences: {
+              ...registration.countryPreferences
+          }
+      };
 
-        if (response.ok) {
-            toast.success('Request rejected successfully');
-            fetchRegistrations();
-        } else {
-            throw new Error('Failed to reject request');
-        }
-    } catch (error) {
-        console.error('Error rejecting request:', error);
-        toast.error('Failed to reject request');
-    }
-  };
+      // Remove the pendingRequest from countryPreferences
+      if (updateData.countryPreferences?.pendingRequest) {
+          delete updateData.countryPreferences.pendingRequest;
+      }
+
+      const response = await fetch('/api/register', {
+          method: 'PUT',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(updateData),
+      });
+
+      if (!response.ok) {
+          throw new Error('Failed to reject request');
+      }
+
+      toast.success('Request rejected successfully');
+      fetchRegistrations();
+  } catch (error) {
+      console.error('Error rejecting request:', error);
+      toast.error('Failed to reject request');
+  }
+};
 
   const getChangeRequests = () => {
     return registrations.filter(reg => reg.countryPreferences?.pendingRequest);
