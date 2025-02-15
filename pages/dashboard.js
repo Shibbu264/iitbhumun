@@ -547,6 +547,27 @@ export default function Dashboard() {
                             <PaymentStatusSection />
                         </div>
                         
+                        <div className='col-span-12 md:col-start-3 md:col-span-8'>
+                            <Box display="flex" justifyContent="center">
+                                <Button 
+                                    variant="contained" 
+                                    href="https://forms.gle/VD5vELwEVNbCmZYdA"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    sx={{ 
+                                        px: 4,
+                                        py: 2,
+                                        mb: 3,
+                                        bgcolor: '#dc2626',
+                                        '&:hover': {
+                                            bgcolor: '#b91c1c',
+                                        }
+                                    }}
+                                >
+                                    Accommodation Form
+                                </Button>
+                            </Box>
+                        </div>
 
                         {/* Add Allocation Section here, before the registration details */}
                         <div className='col-span-12 md:col-start-3 md:col-span-8'>
