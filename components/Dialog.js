@@ -15,6 +15,12 @@ export default function DialogBox (props) {
                                                          paddingTop:'0.25rem',
                                                          height:'5vh'
                 }}> {props.title}</span>
+                 <Button 
+                    className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-all duration-300 mt-7 ml-6"
+                    onClick={() => window.open(props.href, '_blank')}
+                >
+                    Background Guide
+                </Button> 
                 <a href={`${props.href}`}>
                     
                 </a>
